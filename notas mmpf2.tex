@@ -1,0 +1,113 @@
+\documentclass{article}
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[spanish]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=1cm,right=1cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\theoremstyle{definition}
+\newtheorem{definition}{Definición}[section]
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{corollary}{Corolario}[theorem]
+\newtheorem{lemma}{Lema}[section]
+\usepackage{etoolbox}
+\usepackage{graphicx}
+\usepackage{upgreek}
+\newcommand{\bigslant}[2]{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}
+\usepackage{xcolor}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Metodos matemáticos 2}
+\author{Wilfredo Gallegos}
+
+\begin{document}
+\maketitle
+
+\textbf{viernes 7 de julio}
+\section{Función Gamma}
+\textbf{L'imite al infinito(Euler)}\\
+
+\[\begin{array}{rl}
+	\Gamma (z)\equiv & \lim\limits_{n\to \infty} \frac{1\cdot 2\cdot 3\cdot\cdot\cdot n}{z(z+1)(z+2)\cdot\cdot\cdot (z+n)}n^z,\ \ \ z\in\mathbb{Z}^{+}\ o\ z\in\mathbb{C}\\
+	\Gamma(z+1)=& \lim\limits_{n\to \infty} \frac{1\cdot 2\cdot 3\cdot\cdot\cdot n}{(z+1)(z+2)\cdot\cdot\cdot (z+n+1)}n^{z+1}\\
+	=& z\cdot\Gamma (z)= \lim\limits_{n\to \infty}\frac{nz}{z+n+1}\Gamma (z)=\Gamma (z+1)=z\cdot\Gamma (z)
+\end{array}\]
+Aplicando lo anterior a z=1,2,3...n
+
+\[\begin{array}{rl}
+
+	\Gamma (1)=& \lim\limits_{n\to \infty} \frac{1\cdot 2\cdot 3\cdot\cdot\cdot n}{(1)(2)\cdot\cdot\cdot (n+1)}n^z= \lim\limits_{n\to \infty}\frac{n}{n+1}=1\\
+	\Gamma (2)=& z\cdot \Gamma (z)= \Gamma (z+1)=\Gamma (1+1)=1\\
+	\Gamma (3)=& 2\cdot \Gamma (1)= \Gamma (2+1)=2\cdot 1\\
+	\Gamma (4)=& 3\cdot \Gamma (3)= \Gamma (3+1)=3\cdot 2\cdot 1\\
+	.\\
+	.\\
+	.\\
+	\Gamma (n)=&(n-1)!
+
+\end{array}\]
+\textbf{Itegral Definida(Integral de Euler)}
+\[\Gamma (z)=\int^{\infty}_0 e^{-t}t^{z-1}dt,\ \ \ Re(z)>0\]
+Ej. como aparecen en f'isica
+\[\Gamma (z)= 2\int^{\infty}_0 e^{-t^2}t^{z+1}dt\ \ \ o \ \ \ \Gamma (z) = \int^1_0\left[ln(\frac{1}{t})\right]^{z-1}dt\]
+
+Si $z=\frac{1}{2}\Rightarrow \Gamma (\frac{1}{2}) = \sqrt{\pi}$ es integral error de Gauss
+\[F(z,n)=\int^n_0\left(1-\frac{t}{n}\right)^nt^{z-1}dt,\ \ \ \textit{Re(z)}>\textit{0 con n entero positivo}\ni\]
+\[e^{-t}=\lim\limits_{n\to \infty}\left(1-\frac{t}{n}\right)^n\]
+\[\Rightarrow F(z,n)=\int^n_0\left(1-\frac{t}{n}\right)^nt^{z-1}dt = \int^1_0 (1-u)^n(un)^{z-1}ndu\ni u=\frac{t}{n}\]
+\[\frac{F(z,n)}{n^z}=\int^1_0 (1-u)^n(u)^{z-1}du\]\\
+
+Ahora por integraci'on por partes usando $u=(1-u)^n$, $du=n(1-u)^{n-1}du$, $v=\frac{u^z}{z}$, $dv=u^{z-1}du$ tenemos
+\[
+\begin{array}{rl}
+	\frac{F(z,n)}{n^z}=& (1-u)^n \left.\frac{u^z}{z}\right|^1_0-\int^1_0\frac{u^z}{z} n(1-u)^{n-1}du\\
+	F(z,n)=& n^z\cdot \frac{n(n-1)\cdot\cdot\cdot 1}{z(z+1)\cdot\cdot\cdot (z+n-1)}=\int^1_0u^{z+n-1}du\\
+	=& \frac{1\cdot 2\cdot\cdot\cdot n}{z(z+1)\cdot\cdot\cdot (z+n)}n^z\Rightarrow\lim\limits_{n\to \infty}F(z,n)=\Gamma (z)
+\end{array}\]
+
+\textbf{Producto infinito(Weierstrass)}
+\[\frac{1}{\Gamma (z)}= z e^{\delta z} \prod^{\infty}_{n=1}\left(1+\frac{z}{n}\right)e^{-\frac{z}{n}}\]
+\begin{center}
+	$\delta$ := constante de Euler-Mascheron
+	
+	$\delta$ := 0.5772156619
+\end{center}
+
+\textbf{Ecuaci'on estad'istica de Maxwell-Boltzmann}
+\[\begin{array}{lcl}
+	&& \textit{K es la constante de Boltzmann}\\
+	e^{-E/KT} && \textit{T es la temperatura absoluta}\\
+	&& \textit{E(energ'ia): estado de energ'ia ocupada}
+
+\end{array}\]
+
+probabilidad de estar en estado de energ'ia es $Y_{kt}=\beta$
+
+\[\begin{array}{lcl}
+	P(E)=Ce^{-\beta E} && \textit{Para un gas idel sin estructura}\\
+	n(E)dE && n(E)^{1/2}\\
+	1=C\int n(E) e^{-\beta E}dE && \textit{E=energ'ia cin'etica}
+\end{array}\]
+\par\noindent\rule{\textwidth}{0.5pt}
+\[
+\begin{array}{rlr}
+	1=& c\int^{\infty}_0 E^{1/2}e^{-\beta E}dE=\frac{C\Gamma (3/2)}{\beta^{3/2}},& \beta E = T\Rightarrow dE=\frac{dt}{\beta}\\
+	1=& C\int^{\infty}_0 e^{-t}\left(\frac{t}{\beta}\right)^{1/2}\frac{1}{\beta} dt\\
+	&= C \int^{\infty}_0 e^{-t} t^{3/2-1}dt\cdot\frac{1}{\beta^{3/2}}\\
+	=& \frac{C\Gamma (3/2)}{\beta^{3/2}}\\
+	=& c\cdot\frac{\sqrt{\pi}}{2\cdot\beta^{3/2}}
+\end{array}\]
+\[\therefore C= \frac{2\cdot \beta^{3/2}}{\sqrt{\pi}}\]
+
+\end{document}
+
+
