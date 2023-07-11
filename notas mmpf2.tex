@@ -12,6 +12,7 @@
 \usepackage{verbatim}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage[makeroom]{cancel}
 \usepackage{amsthm}
 \usepackage{amsfonts}
 \theoremstyle{definition}
@@ -107,6 +108,126 @@ probabilidad de estar en estado de energ'ia es $Y_{kt}=\beta$
 	=& c\cdot\frac{\sqrt{\pi}}{2\cdot\beta^{3/2}}
 \end{array}\]
 \[\therefore C= \frac{2\cdot \beta^{3/2}}{\sqrt{\pi}}\]
+\newpage
+
+\textbf{lunes 10 de julio}\\
+\textbf{Relaciones de funciones}
+
+\[\Gamma (z+1) = z\Gamma (z)\]
+\textbf{Fomula de reflexi'on}
+
+\[\Gamma (z)\Gamma (1-z) = \frac{\pi}{sen(z\pi)}\]
+\textbf{F'ormuláde duplicaci'on de Legendre}
+
+\[\Gamma (1+z)\Gamma (z+\frac{1}{2}) = 2^{-2z}\sqrt{\pi}\Gamma (2z+1) \]
+\textbf{Notac'i'on doble factorial: }
+\[
+\begin{array}{rl}
+	(2n+1)!!=& 1\cdot 3\cdot 5\cdot\cdot\cdot (2n+1)=\frac{(2n+1)!}{2^nn}\\
+	(2n)!!=& 2\cdot 4\cdot 6\cdot\cdot\cdot (2n)=2^nn!\\
+	(-1)!!=& 1
+\end{array}
+\]
+\textbf{PROPIEDADES ANAL'ITICAS}
+
+$[\Gamma (z)]^{-1}$ tiene singularidades en $z=0,-1,-2...$ y no tiene cuando  $z=-1,2,3...$ y no tiene ceros en el plano complejo finito positivo.\\
+El residuo $R_n$ cuando $z=-n$ donde n es un entero mayor o igual a cero.\\
+\[
+\begin{array}{rl}
+	R_n=&\lim\limits_{n\to 0} (\epsilon\Gamma (-n+\epsilon))\\
+	=& \lim\limits_{n\to 0} \frac{\epsilon\Gamma (-n+1+\epsilon)}{-n+\epsilon}\\
+)	=& \lim\limits_{n\to 0}\frac{\epsilon\Gamma (-n+2+\epsilon)}{(\n+\epsilon)(\n+1+\epsilon)}\\
+	=&\lim\limits_{n\to 0} \frac{\epsilon\Gamma (1+\epsilon)}{(-n+\epsilon)\cdot\cdot\cdot(\epsilon))}\\
+	=& \frac{(-1)^n}{n!}, \textit{el residuo alterna signos en } z=-n
+\end{array}
+\]
+\textbf{Integral de Schaefli}
+\[\int_Ce^{-t}t^vdt=(e^{2\piiv})\Gamma (v+1)\]
+donde C es el contorno
+INSERTAR IMAGEN
+Esta integral es 'util cuando V no es entero.\\
+\textbf{Notaci'on factorial:}
+\[\prod (z)=z!=\Gamma (z+1)\]
+\textbf{Funci'on Digamma}
+
+\[
+\begin{array}{rl}
+	\ln(\Gamma (z+1))=& z\cdot\Gamma (z)\\
+	=& \lim\limits_{n\to \infty}\frac{z}{z} \ln\left[\frac{n!\cdot n^z}{(z+1)(z_2)\cdot\cdot\cdot (z+n)\right]}\\
+	\frac{d}{dz} \ln(\Gamma (z+1))=& \frac{d}{dz}\lim\limits_{n\to \infty}\left[\ln(n!)+z\cdot \ln(n)-\ln(z+1)-\ln(z+2)-...\ln(z+n)\right]\\
+	\frac{d}{dz}\ln (\Gamma (z+1))\equiv \underbrace{\varphi (z+1)}_{Funci'on\ digamma}=& \lim\limits_{n\to \infty}\left( \ln (n)-\frac{1}{z+1}-\frac{1}{z+2}\cdot\cdot\cdot -\frac{1}{z+n}\right)\\
+	&\\
+	\varphi (z+1)=& \frac{[\Gamma (z+1)]^'}{\Gamma (z+1)}
+\end{array}
+\]
+Si sumamos y restamos un n'umero arm'onico
+\[H_n=\sum^n_{m=1}\frac{1}{m}\]
+\[\varphi (z+1) =\lim\limits_{n\to \infty} \underbrace{\left[(\ln (n)-H_n)}_{=-\delta\textit{ cuando } n\to\infty}-\sum\left(\frac{1}{z+m}-\frac{1}{m\right)}\right]\]
+\[\Rightarrow \varphi (z+1) = -\delta +\sum^{\infty}_{m=1}\frac{z}{m(m+z)},\ \ \ \textit{si z=0}\Rightarrow\varphi (1)=-\delta\]
+para $n>0$, n entero.
+\[
+\begin{array}{rl}
+	\varphi (n+1) =& =\delta +\sum^n_{m=1}\frac{1}{m}\\
+	=& -\delta+H_n
+\end{array}
+\]
+\textbf{Funci'on Poligamma}
+
+Cuando se deriva muchas veces la funci'on digamma
+\[
+\begin{array}{rl}
+	\varphi^{(m)} (z+1) \equiv& \frac{d^{m+1}}{dz^{m+1}}\ln\Gamma (z+1)\\
+	\varphi^{(m)} (z+1)=& (-1)^{m+1}m!\sum^{\infty}_{n=1}\frac{1}{(z+n)^{m+1}},\ \ \ m=1,2,3...
+\end{array}
+\]
+Si z=0 la funci'on se conoce como zeta de Riemann
+\[\zeta (m) = \sum^{\infty}_{n-1}\frac{1}{n^m}\]
+\[\Rightarrow \varphi^{(m)}_{(1)}=(-1)^{m+1}\cdot m!\cdot \zeta (m+1),\ \ \ m=1,2,3...\]
+\textbf{Expansi'on de Maclaurin}
+\[
+\begin{array}{rl}
+	\ln\Gamma (z+1) =& \sum^{\infty}_{n=1}\frac{z^n}{n!}\varphi^{(n-1)}_{(1)}\\
+	=& -\delta\cdot z +\sum^{\infty}_{n=2}(-1)^n\frac{z^n}{n}\zeta (n)
+\end{array}
+\]
+converge en $|z|<1$ para $z=x\Rightarrow$ se puede calcular $\Gamma (z+1)$ para n'umeros reales o complejos.\\
+\textbf{Suma de series}
+
+Transformar la serie por medio de fracciones parciales y expresar la serie infinita como sumas finitas de funciones gamma y poligamma.\\
+\textbf{EJEMPLO:}
+\[
+\begin{array}{rl}
+	\varphi ^{(m)} (z+2)=& \varphi^{(m)} (z+1)+(-1)^{m}\frac{m!}{(z+1)^{m+1}}\\
+	\varphi^{(m)} (z+2)-\varphi^{(m)} (z+1)=& \frac{(-1)^mm!}{(z+1)^{m+1}}\\
+	\\
+	\frac{d^{(m)}}{dz^{(m)}}\left[\varphi (z+2) -\varphi (z+1)\right]\\
+	\\
+	\varphi (z+2) - \varphi (z+1)=&\sum^{\infty}_{m=1}\frac{z+1}{m(m+z+1)}-\sum^{\infty}_{m=1}\frac{z}{m(m+z)}\\
+	=& \sum^{\infty}_{m=1}\left[\frac{1}{m}-\frac{1}{m+z+1}-\frac{1}{m}+\frac{1}{m+z}\right]\\
+	=& \frac{1}{z+1}
+\end{array}
+\]
+\[\frac{d^m}{dz^m}\left[\varphi (z+2)-\varphi (z+1)\right] = \frac{d^m}{dz^m}\left[\frac{1}{z+1}\right]=\frac{(-1)^mm!}{(z+1)^{m+1}}\]
+Demuestre  que:
+\[\frac{1}{2}\ln \left[\frac{\pi\cdot z}{sen(\pi\cdot z)}\right]=\sum^{\infty}_{n=1}\frac{\zeta (2n)}{2n}z^{2n},\ \ \ |z|<1\]
+\textcolor{red}{
+\begin{itemize}
+	\item $\frac{1}{2}\ln\left[\textcolor{green}{\underbrace{\textcolor{red}{\Gamma (z)}}_{z\Gamma (z)=\Gamma (z+1)}}\Gamma (z-1)\right]=\frac{1}{2}\ln\left[\frac{\pi}{sen(z\pi)}\right]$
+	\item $\ln \Gamma (z+1) =\lim\limits_{n\to \infty}\left[\ln (n!)+z\ln (n)-\ln (z+1)-...-\ln (z+n)\right]$
+\end{itemize}
+}
+\[\Gamma (z)\Gamma (1-z)\rightsquigarrow\Gamma (1+z)\Gamma (1-z)\]
+\[
+\begin{array}{rl}
+	\ln\left[\Gamma (1+z)\Gamma (1-z)\right]=& -\delta\cdot z +\sum^{\infty}_{n=2}(-1)^n\frac{z^n}{n}\zeta (n)\\
+	&+(-\delta(-z))+\sum^{\infty}_{n=2}(-1)^n\frac{(-z)^n}{n}\zeta (n)\\
+	=&\sum^{\infty}_{n=2}\zeta (n)\underbrace{\left[\frac{z^n}{n}+\frac{(-z)^n}{n}\right]}_{\textcolor{red}{z^{2n}}}\\
+	=& 2\sum^{\infty}_{n=1}\cancelto{1}{(-1)^{2n}}\zeta (2n)\frac{z^{2n}}{2n}
+\end{array}
+\]
+ 
+
+
 
 \end{document}
 
