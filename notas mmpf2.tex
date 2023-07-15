@@ -136,15 +136,19 @@ El residuo $R_n$ cuando $z=-n$ donde n es un entero mayor o igual a cero.\\
 \begin{array}{rl}
 	R_n=&\lim\limits_{n\to 0} (\epsilon\Gamma (-n+\epsilon))\\
 	=& \lim\limits_{n\to 0} \frac{\epsilon\Gamma (-n+1+\epsilon)}{-n+\epsilon}\\
-)	=& \lim\limits_{n\to 0}\frac{\epsilon\Gamma (-n+2+\epsilon)}{(\n+\epsilon)(\n+1+\epsilon)}\\
+	=& \lim\limits_{n\to 0}\frac{\epsilon\Gamma (-n+2+\epsilon)}{(\n+\epsilon)(\n+1+\epsilon)}\\
 	=&\lim\limits_{n\to 0} \frac{\epsilon\Gamma (1+\epsilon)}{(-n+\epsilon)\cdot\cdot\cdot(\epsilon))}\\
 	=& \frac{(-1)^n}{n!}, \textit{el residuo alterna signos en } z=-n
 \end{array}
 \]
+
 \textbf{Integral de Schaefli}
-\[\int_Ce^{-t}t^vdt=(e^{2\piiv})\Gamma (v+1)\]
+\[\int_Ce^{-t}t^vdt=(e^{2\pi iv})\Gamma (v+1)\]
 donde C es el contorno
-INSERTAR IMAGEN
+\begin{center}
+\includegraphics[scale=0.4]{../grafico 1.png} 
+\end{center}
+
 Esta integral es 'util cuando V no es entero.\\
 \textbf{Notaci'on factorial:}
 \[\prod (z)=z!=\Gamma (z+1)\]
@@ -167,7 +171,7 @@ Si sumamos y restamos un n'umero arm'onico
 para $n>0$, n entero.
 \[
 \begin{array}{rl}
-	\varphi (n+1) =& =\delta +\sum^n_{m=1}\frac{1}{m}\\
+	\varphi (n+1) =& -\delta +\sum^n_{m=1}\frac{1}{m}\\
 	=& -\delta+H_n
 \end{array}
 \]
@@ -194,7 +198,7 @@ converge en $|z|<1$ para $z=x\Rightarrow$ se puede calcular $\Gamma (z+1)$ para 
 \textbf{Suma de series}
 
 Transformar la serie por medio de fracciones parciales y expresar la serie infinita como sumas finitas de funciones gamma y poligamma.\\
-\textbf{EJEMPLO:}
+\textbf{EJEMPLO: }
 \[
 \begin{array}{rl}
 	\varphi ^{(m)} (z+2)=& \varphi^{(m)} (z+1)+(-1)^{m}\frac{m!}{(z+1)^{m+1}}\\
@@ -225,7 +229,81 @@ Demuestre  que:
 	=& 2\sum^{\infty}_{n=1}\cancelto{1}{(-1)^{2n}}\zeta (2n)\frac{z^{2n}}{2n}
 \end{array}
 \]
- 
+\newpage
+\textbf{viernes 14 de julio}
+
+\textbf{La Funci'on Beta}
+
+\[\Gamma (p+q)\propto \Gamma (p)\Gamma (q)\]
+\[
+\begin{array}{rl}
+	n!= \Gamma (n+1)\& \int^{\infty}_0 e^{-t}t^2 dt,\ \ \textit{Variante de gamma para definir la funi'on beta}\\
+	\Gamma (m)\Gamma (n)=& \int^{\infty}_0 e^{-u}u^m fu\int^{\infty}_0 e^{-v}v^n dv
+\end{array}
+\]
+\[
+\begin{array}{cc}
+	u=x^2 & v=y^2\\
+	du=2xdx & dv= 2ydy
+\end{array}
+\]
+\[
+\begin{array}{rl}
+	\Gamma (m)\Gamma (n) =& \int^{\infty}_0 \int^{\infty}_0e^{-x^{2}}e^{-y^{2}}x^{2m}(2x)y^{2m}(2y)dxdy\\
+	=& 4\int^{\infty}_0 e^{-x^{2}} e^{-x^{2}}e^{-y^{2}}x^{2m+1}y^{2m+1}dxdy
+\end{array}
+\]
+otro cambio de variables
+\[
+\begin{array}{cc}
+	x=rcos(\theta) & y=rsen(\theta)
+\end{array}
+\]
+Usando el jacobiano
+\[
+\left|
+\begin{array}{ccc}
+	\frac{\partial x}{\partial r}= cos\theta dr && \frac{\partial x}{\partial \theta} =-rsen\theta d\theta\\
+	\\
+	\frac{\partial y}{\partial r} = sen\theta dr && \frac{\partial y}{\partial \theta} r cos\theta d\theta
+\end{array}\right|
+=rdrd\theta
+\]
+\[
+\begin{array}{rl}
+	=& \int^{\infty}_0\int^{\pi/2}_0 \cancelto{e^{-r^2cos^2\theta}}{e^{-r^2}} r^{2m+2n+3} cos^{2m+1}\theta sen ^{2n+1}drd\theta\\
+	\\Gamma (m)\Gamma (n) =& 2 \Gamma (m+n+1)\int^{\pi/2}_0 cos^{2m+1}\theta sen^{2n+1}\theta d\theta
+\end{array}
+\]
+\[
+\begin{array}{rl}
+	\Gamma (z)=& 2 \int^{\infty}_0 e^{-t^2}t^{2z-1}dt;\ Re(z>0)\\
+	\Gamma (q)\Gamma (p) =& 4\int^{\infty}_0 e^{-s^2} s^{2q-1}ds\int^{\infty}_0 e^{-t^2}t^{2p-1}dt
+\end{array}
+\]
+\[
+\begin{array}{cc}
+	s=rcos\theta & t=rsen\theta\\
+	r^2=s^2+t^2 & dsdt=rdrd\theta
+\end{array}
+\]
+\[
+\begin{array}{rl}
+	\Gamma (q)\Gamma (p)=& 4\int\int e^{-r^2cos^2\theta}e^{-r^2sen^2\theta}r^{2q-1}cos^{2q-1}r^{2p-1}sen^{2p-1}rdrd\theta\\
+	=& 2\cdot 2 \int^{\infty}_0 e^{-r^2}r^{2q+2p-1}cos^{2q-1}sen^{2p-1}drd\theta\\
+	\textcolor{blue}{\Gamma (p)\Gamma (q)=}&\textcolor{blue}{2\int cos^{2q-1}sen^{2p-1} d\theta}
+\end{array}
+\]
+\[\frac{m! n!}{(m+n+1)!}=2\int^{pi /2}_0 cos^{2m+1}\theta sen^{2n+1}\theta d \theta\]
+
+\begin{center}
+\fbox{\begin{minipage}{15em}
+  \[b(p,q)=\frac{\Gamma (q)\Gamma (p)}{\Gamma (q+p)}\]
+\end{minipage}} definici'on de funci'on beta
+\end{center}
+\[b(p,q)=b(q,p)\]
+Si se sustituye $t=cos^2\theta$ y $dt=-2 2cos\theta sen\theta d\theta$
+
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.15)  10 JUL 2023 18:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.15)  14 JUL 2023 18:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -581,19 +581,15 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-l.145 \[\int_Ce^{-t}t^vdt=(e^{2\piiv
-                                    })\Gamma (v+1)\]
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
+<../grafico 1.png, id=32, 572.1375pt x 234.8775pt>
+File: ../grafico 1.png Graphic file (type png)
+<use ../grafico 1.png>
+Package pdftex.def Info: ../grafico 1.png  used on input line 149.
+(pdftex.def)             Requested size: 228.85094pt x 93.94933pt.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.156 ...}{(z+1)(z_2)\cdot\cdot\cdot (z+n)\right]}
+l.160 ...}{(z+1)(z_2)\cdot\cdot\cdot (z+n)\right]}
                                                   \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -604,7 +600,7 @@ my insertion and my current dilemma will both disappear.
 ! Extra }, or forgotten $.
 \frac  #1#2->{\begingroup #1\endgroup \@@over #2}
                                                  
-l.156 ...}{(z+1)(z_2)\cdot\cdot\cdot (z+n)\right]}
+l.160 ...}{(z+1)(z_2)\cdot\cdot\cdot (z+n)\right]}
                                                   \\
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -615,7 +611,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing { inserted.
 <to be read again> 
                    ^
-l.160 ...)=& \frac{[\Gamma (z+1)]^'}{\Gamma (z+1)}
+l.164 ...)=& \frac{[\Gamma (z+1)]^'}{\Gamma (z+1)}
                                                   
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -625,7 +621,7 @@ so that I will find a matching right brace soon.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.160 ...)=& \frac{[\Gamma (z+1)]^'}{\Gamma (z+1)}
+l.164 ...)=& \frac{[\Gamma (z+1)]^'}{\Gamma (z+1)}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -633,10 +629,11 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
+[3 <../grafico 1.png>]
 ! Extra }, or forgotten \right.
 \underbrace  ...{##\crcr $\hfil \displaystyle {#1}
                                                   \hfil $\crcr \noalign {\ke...
-l.165 ... \infty} \underbrace{\left[(\ln (n)-H_n)}
+l.169 ... \infty} \underbrace{\left[(\ln (n)-H_n)}
                                                   _{=-\delta\textit{ cuando ...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -647,7 +644,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.165 ... \infty} \underbrace{\left[(\ln (n)-H_n)}
+l.169 ... \infty} \underbrace{\left[(\ln (n)-H_n)}
                                                   _{=-\delta\textit{ cuando ...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -658,7 +655,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.165 ... \infty} \underbrace{\left[(\ln (n)-H_n)}
+l.169 ... \infty} \underbrace{\left[(\ln (n)-H_n)}
                                                   _{=-\delta\textit{ cuando ...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -669,7 +666,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.165 ...sum\left(\frac{1}{z+m}-\frac{1}{m\right)}
+l.169 ...sum\left(\frac{1}{z+m}-\frac{1}{m\right)}
                                                   \right]\]
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -680,7 +677,7 @@ my insertion and my current dilemma will both disappear.
 ! Extra }, or forgotten $.
 \frac  #1#2->{\begingroup #1\endgroup \@@over #2}
                                                  
-l.165 ...sum\left(\frac{1}{z+m}-\frac{1}{m\right)}
+l.169 ...sum\left(\frac{1}{z+m}-\frac{1}{m\right)}
                                                   \right]\]
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -689,11 +686,11 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 ! Extra \right.
-l.165 ...t(\frac{1}{z+m}-\frac{1}{m\right)}\right]
+l.169 ...t(\frac{1}{z+m}-\frac{1}{m\right)}\right]
                                                   \]
 I'm ignoring a \right that had no matching \left.
 
-[3] [4] (notas mmpf2.aux
+[4] [5] [6] (notas mmpf2.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
 )
@@ -701,10 +698,10 @@ Package rerunfilecheck Info: File `"notas mmpf2".out' has not changed.
 (rerunfilecheck)             Checksum: 32008AC0A2FAA78CC17BCE524D11A2E9;114.
  ) 
 Here is how much of TeX's memory you used:
- 12332 strings out of 476331
- 194638 string characters out of 5783953
- 1870660 words of memory out of 5000000
- 32594 multiletter control sequences out of 15000+600000
+ 12343 strings out of 476331
+ 194799 string characters out of 5783953
+ 1871660 words of memory out of 5000000
+ 32600 multiletter control sequences out of 15000+600000
  522585 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,16n,76p,241b,459s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -732,9 +729,9 @@ fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Users/ThinkPad T470/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users
 /ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbol
 s/msbm10.pfb>
-Output written on "notas mmpf2.pdf" (4 pages, 233565 bytes).
+Output written on "notas mmpf2.pdf" (6 pages, 448941 bytes).
 PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
- 6 named destinations out of 1000 (max. 500000)
- 9 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 136 PDF objects out of 1000 (max. 8388607)
+ 8 named destinations out of 1000 (max. 500000)
+ 14 words of extra memory for PDF output out of 10000 (max. 10000000)
 
