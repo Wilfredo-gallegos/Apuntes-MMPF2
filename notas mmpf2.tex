@@ -294,7 +294,7 @@ Usando el jacobiano
 	\textcolor{blue}{\Gamma (p)\Gamma (q)=}&\textcolor{blue}{2\int cos^{2q-1}sen^{2p-1} d\theta}
 \end{array}
 \]
-\[\frac{m! n!}{(m+n+1)!}=2\int^{pi /2}_0 cos^{2m+1}\theta sen^{2n+1}\theta d \theta\]
+\[\frac{m! n!}{(m+n+1)!}\textcolor{red}{\star}= 2\int^{pi /2}_0 cos^{2m+1}\theta sen^{2n+1}\theta d \theta\]
 
 \begin{center}
 \fbox{\begin{minipage}{15em}
@@ -302,8 +302,19 @@ Usando el jacobiano
 \end{minipage}} definici'on de funci'on beta
 \end{center}
 \[b(p,q)=b(q,p)\]
-Si se sustituye $t=cos^2\theta$ y $dt=-2 2cos\theta sen\theta d\theta$
-
+Si se sustituye $t=cos^2\theta$ y $dt=-2cos\theta sen\theta d\theta$
+\[
+\begin{array}{ll}
+	\begin{array}{rl}
+		\cancelto{t}{cos^2\theta}+sen^2\theta=&1\\
+		sen^2\theta =&1-t
+	\end{array} \textcolor{red}{\star}= & 2\int^{1}_0 cos^{2m}\theta\cancel{cos\theta} (1-t)^n\cancel{sen\theta}dt\\
+	\begin{array}{rr}
+		sen^{2n+1}\theta=&sen^{2n}\theta sen\theta\\
+		=&(1-t)^n sen\theta
+	\end{array} = & \int^{1}_0 t^m (1-t)^n dt\Rightarrow \textit{ otra forma de escribir} B(m+1,n+1)
+\end{array}
+\]
 
 
 
