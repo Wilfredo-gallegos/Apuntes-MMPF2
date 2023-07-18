@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.15)  14 JUL 2023 18:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.15)  17 JUL 2023 18:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -562,7 +562,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 133--135
 ! Undefined control sequence.
 <argument> (\n 
                +\epsilon )(\n +1+\epsilon )
-l.139 ...+\epsilon)}{(\n+\epsilon)(\n+1+\epsilon)}
+l.140 ...+\epsilon)}{(\n+\epsilon)(\n+1+\epsilon)}
                                                   \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -573,7 +573,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> (\n +\epsilon )(\n 
                               +1+\epsilon )
-l.139 ...+\epsilon)}{(\n+\epsilon)(\n+1+\epsilon)}
+l.140 ...+\epsilon)}{(\n+\epsilon)(\n+1+\epsilon)}
                                                   \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -581,15 +581,15 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<../grafico 1.png, id=32, 572.1375pt x 234.8775pt>
+<../grafico 1.png, id=36, 572.1375pt x 234.8775pt>
 File: ../grafico 1.png Graphic file (type png)
 <use ../grafico 1.png>
-Package pdftex.def Info: ../grafico 1.png  used on input line 149.
+Package pdftex.def Info: ../grafico 1.png  used on input line 150.
 (pdftex.def)             Requested size: 228.85094pt x 93.94933pt.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.160 ...}{(z+1)(z_2)\cdot\cdot\cdot (z+n)\right]}
+l.161 ...}{(z+1)(z_2)\cdot\cdot\cdot (z+n)\right]}
                                                   \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -600,7 +600,7 @@ my insertion and my current dilemma will both disappear.
 ! Extra }, or forgotten $.
 \frac  #1#2->{\begingroup #1\endgroup \@@over #2}
                                                  
-l.160 ...}{(z+1)(z_2)\cdot\cdot\cdot (z+n)\right]}
+l.161 ...}{(z+1)(z_2)\cdot\cdot\cdot (z+n)\right]}
                                                   \\
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -611,7 +611,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing { inserted.
 <to be read again> 
                    ^
-l.164 ...)=& \frac{[\Gamma (z+1)]^'}{\Gamma (z+1)}
+l.165 ...)=& \frac{[\Gamma (z+1)]^'}{\Gamma (z+1)}
                                                   
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -621,7 +621,7 @@ so that I will find a matching right brace soon.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.164 ...)=& \frac{[\Gamma (z+1)]^'}{\Gamma (z+1)}
+l.165 ...)=& \frac{[\Gamma (z+1)]^'}{\Gamma (z+1)}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -633,7 +633,7 @@ my insertion and my current dilemma will both disappear.
 ! Extra }, or forgotten \right.
 \underbrace  ...{##\crcr $\hfil \displaystyle {#1}
                                                   \hfil $\crcr \noalign {\ke...
-l.169 ... \infty} \underbrace{\left[(\ln (n)-H_n)}
+l.170 ... \infty} \underbrace{\left[(\ln (n)-H_n)}
                                                   _{=-\delta\textit{ cuando ...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -644,7 +644,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.169 ... \infty} \underbrace{\left[(\ln (n)-H_n)}
+l.170 ... \infty} \underbrace{\left[(\ln (n)-H_n)}
                                                   _{=-\delta\textit{ cuando ...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -655,7 +655,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.169 ... \infty} \underbrace{\left[(\ln (n)-H_n)}
+l.170 ... \infty} \underbrace{\left[(\ln (n)-H_n)}
                                                   _{=-\delta\textit{ cuando ...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -666,7 +666,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.169 ...sum\left(\frac{1}{z+m}-\frac{1}{m\right)}
+l.170 ...sum\left(\frac{1}{z+m}-\frac{1}{m\right)}
                                                   \right]\]
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -677,7 +677,7 @@ my insertion and my current dilemma will both disappear.
 ! Extra }, or forgotten $.
 \frac  #1#2->{\begingroup #1\endgroup \@@over #2}
                                                  
-l.169 ...sum\left(\frac{1}{z+m}-\frac{1}{m\right)}
+l.170 ...sum\left(\frac{1}{z+m}-\frac{1}{m\right)}
                                                   \right]\]
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -686,52 +686,113 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 ! Extra \right.
-l.169 ...t(\frac{1}{z+m}-\frac{1}{m\right)}\right]
+l.170 ...t(\frac{1}{z+m}-\frac{1}{m\right)}\right]
                                                   \]
 I'm ignoring a \right that had no matching \left.
 
-[4] [5] [6] (notas mmpf2.aux
+[4] [5] [6]
+! Undefined control sequence.
+<argument> (E-Ax)^{1\2
+                      }
+l.326 ...m}\int^{X_{max}}_0\frac{dx}{(E-Ax)^{1\2}}
+                                                  \]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \frac {1}{2}=q+1\Rightarrowq 
+                                        =\frac {1}{2}-2
+l.337 \end{minipage}}
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \int ^1_0t^{\frac {1}{n}-1}(1-t)^{-1\2
+                                                 }
+l.337 \end{minipage}}
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[7]
+! Missing } inserted.
+<inserted text> 
+                }
+l.418 ...\frac{d^{m+1}}{dz^{m+1}}\ln \Gamma (z+1)}
+                                                  \\
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Extra }, or forgotten $.
+\@textcolor ...otect \leavevmode {\color #1{#2}#3}
+                                                  
+l.418 ...\frac{d^{m+1}}{dz^{m+1}}\ln \Gamma (z+1)}
+                                                  \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+[8]
+
+LaTeX Font Warning: Command \tiny invalid in math mode on input line 432.
+
+[9] (notas mmpf2.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
 )
 Package rerunfilecheck Info: File `"notas mmpf2".out' has not changed.
-(rerunfilecheck)             Checksum: 32008AC0A2FAA78CC17BCE524D11A2E9;114.
+(rerunfilecheck)             Checksum: FD79209F008DF144E3D7616D876C5E59;253.
  ) 
 Here is how much of TeX's memory you used:
- 12343 strings out of 476331
- 194799 string characters out of 5783953
+ 12359 strings out of 476331
+ 194941 string characters out of 5783953
  1871660 words of memory out of 5000000
- 32600 multiletter control sequences out of 15000+600000
- 522585 words of font info for 71 fonts, out of 8000000 for 9000
+ 32607 multiletter control sequences out of 15000+600000
+ 523204 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,21n,76p,241b,459s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,21n,76p,273b,534s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmbx10.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ThinkPad T470/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ThinkPad T470/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users
-/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmm
-i5.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmmi7.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ThinkPad T470/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ThinkPad T470/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/User
-s/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-r5.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmr7.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ThinkPad T470/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/ThinkPad T470/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/User
-s/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-ti10.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmti7.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Users/ThinkPad T470/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users
-/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbol
-s/msbm10.pfb>
-Output written on "notas mmpf2.pdf" (6 pages, 449805 bytes).
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/U
+sers/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmmi10.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmmi5.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/ThinkPad T470/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ThinkPad 
+T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:
+/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmr17.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmr5.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/ThinkPad T470/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ThinkPad 
+T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:
+/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmsy7.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmti10.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Users/ThinkPad T470/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurm10.pfb><C:/Users/Thi
+nkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/l
+ine10.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/symbols/msam10.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "notas mmpf2.pdf" (9 pages, 488862 bytes).
 PDF statistics:
- 136 PDF objects out of 1000 (max. 8388607)
- 8 named destinations out of 1000 (max. 500000)
- 14 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 168 PDF objects out of 1000 (max. 8388607)
+ 15 named destinations out of 1000 (max. 500000)
+ 22 words of extra memory for PDF output out of 10000 (max. 10000000)
 

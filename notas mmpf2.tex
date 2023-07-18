@@ -136,6 +136,7 @@ El residuo $R_n$ cuando $z=-n$ donde n es un entero mayor o igual a cero.\\
 \begin{array}{rl}
 	R_n=&\lim\limits_{n\to 0} (\epsilon\Gamma (-n+\epsilon))\\
 	=& \lim\limits_{n\to 0} \frac{\epsilon\Gamma (-n+1+\epsilon)}{-n+\epsilon}\\
+
 	=& \lim\limits_{n\to 0}\frac{\epsilon\Gamma (-n+2+\epsilon)}{(\n+\epsilon)(\n+1+\epsilon)}\\
 	=&\lim\limits_{n\to 0} \frac{\epsilon\Gamma (1+\epsilon)}{(-n+\epsilon)\cdot\cdot\cdot(\epsilon))}\\
 	=& \frac{(-1)^n}{n!}, \textit{el residuo alterna signos en } z=-n
@@ -272,7 +273,7 @@ Usando el jacobiano
 \[
 \begin{array}{rl}
 	=& \int^{\infty}_0\int^{\pi/2}_0 \cancelto{e^{-r^2cos^2\theta}}{e^{-r^2}} r^{2m+2n+3} cos^{2m+1}\theta sen ^{2n+1}drd\theta\\
-	\\Gamma (m)\Gamma (n) =& 2 \Gamma (m+n+1)\int^{\pi/2}_0 cos^{2m+1}\theta sen^{2n+1}\theta d\theta
+	\Gamma (m)\Gamma (n) =& 2 \Gamma (m+n+1)\int^{\pi/2}_0 cos^{2m+1}\theta sen^{2n+1}\theta d\theta
 \end{array}
 \]
 \[
@@ -315,9 +316,135 @@ Si se sustituye $t=cos^2\theta$ y $dt=-2cos\theta sen\theta d\theta$
 	\end{array} = & \int^{1}_0 t^m (1-t)^n dt\Rightarrow \textit{ otra forma de escribir} B(m+1,n+1)
 \end{array}
 \]
+\newpage
+\textbf{lunes 17 de julio}
+\textbf{Ejemplo}
 
+Una particula de masa m se mueve en un potencial sim'etrico esta descrito por $v(x)=A|x|^n$ y energ'ia total como $\frac{1}{2}m\left(\frac{dx}{dt}\right)^2 +v(x)=E$
 
+Resolviendo para $\frac{dx}{dt}$ e intgrando encontramos que el movimiento per'iodico es:
+\[\zeta=\sqrt{2m}\int^{X_{max}}_0\frac{dx}{(E-Ax)^{1\2}}\]
+donde $X_{max}$ es el punto de innplexion clasico dado por $Ax_{max}^n=E$
 
+Muestre que:
+\[\uptau=\frac{2}{n}\sqrt{\frac{e\pi m}{E}}\left(\frac{E}{A}\right)^{1/2}\left[\frac{\Gamma (1/n)}{\Gamma (\frac{1}{n}+\frac{1}{2})}\right]\]
+\begin{center}
+\fbox{\begin{minipage}{30em}
+  \[B(p+1,q+1)=B(1/n,1/2)=\int^1_0t^p(1-t^qdt)\]
+  \[\textcolor{green}{\frac{1}{n}=p+1\Rightarrow p=\frac{1}{n}-1}\]
+  \[\textcolor{green}{\frac{1}{2}=q+1\Rightarrowq=\frac{1}{2}-2}\]
+  \[\textcolor{green}{\int^1_0t^{\frac{1}{n}-1}(1-t)^{-1\2}}\]
+\end{minipage}}
+\end{center}
+\[\textcolor{red}{t=\frac{Ax^n}{E}}\Rightarrow \left(\frac{Et}{A}\right)^{1/n}\]
+\[\textcolor{red}{dt=\frac{A}{E}n(x^{n-1})dx}\]
+\[\textcolor{red}{dx=\underbrace{\frac{E}{A}}_{\textcolor{black}{\frac{1}{n}\frac{x}{t}dt}}\frac{1}{n}\frac{x}{x^n}dt}\]
+\[
+\begin{array}{rl}
+	\uptau =& 2\frac{\sqrt{2m}}{\sqrt{E}\int^1_0\frac{\frac{x}{nt}dt}{(1-t)^{1/2}}}\\
+	=&\textcolor{red}{\left(\frac{E}{A}\right)^{1/n}\frac{2}{n}}\sqrt{\frac{2m}{E}}\int^1_0\frac{\frac{\frac{(Et)^{1/n}}{A^{1/n}}}{nt}dt}{(1-t)^{1/2}}\\
+	=&\frac{2}{n}\sqrt{\frac{2m}{E}}\left(\frac{E}{A}\right)^{1/n}\underbrace{\int^1_0t^{\frac{1}{n}-1}(1-t)^{-1/2}dt}_{\textcolor{red}{\frac{\Gamma (\frac{1}{n})\Gamma \cancelto{\sqrt{\pi}}{\Gamma (1/2)}}{\Gamma (\frac{1}{n}+\frac{1}{2})}}}\\
+	\uptau =& \frac{2}{n}\sqrt{\frac{2\pi m}{E}}\left(\frac{E}{A}\right)^{1/n}\frac{\Gamma} (\frac{1}{n}){\Gamma (\frac{1}{n}+\frac{1}{2})}
+\end{array}
+\]
+\section{SERIES DE STIRLING}
+\[\ln (n!)\rightsquigarrow \ln \Gamma (z)\]
+para z no entero, $|z|$ muy grande, no Series de Maclaurin
+\[\Gamma (z+1)=z\Gamma (z)\]
+Se usa una expansi'on asint'otica para $\ln (\Gamma (z))$ esta expansi'on es la que se conoce como \textcolor{red}{Serie de Stirling} o \textcolor{red}{Formula de Stirling}
+
+\textbf{Series asint'oticas$\to$ Series semi-convergentes$\to$Series de Poincar'e}
+
+Se consideran 2 tipos de integrales 
+\[
+\begin{array}{rl}
+	I_1 (x)=& \int^{\infty}_xe^{-u}f(u)du\\
+	\\
+	I_2 (x)=& \int^{\infty}_0e^{-u}f\left(\frac{u}{x}\right)du
+\end{array}
+\]
+Qu'e podemos hacer con las series asint'oticas:
+\begin{enumerate}
+	\item Si multiplicamos 2 series asint'oticas vamos a tener otra serie asint'otica.
+	\item Se pueden integrar t'ermino a t'ermino u el resultado ser'a, otra serie asintotica de la forma
+	\[\int^{\infty}_xf(x)dx\]
+	\item La diferenciaci'on es v'alido 'unicamente bajo ciertas condiciones.
+\end{enumerate}
+
+M'etodo para generar una serie asint'otica:
+\[\begin{array}{ll}
+	\textbf{M'etodo de Steepest Descents}
+	&\left\}\begin{array}{ll}
+		\textit{a lo largo del camino}\\
+		\textit{m'aximo decrecimiento}	
+	\end{array}\right.\\
+	\to \textit{Saddle point}\to \textit{punto silla}\\
+	\to \textit{M'etodo de integrandos Holomorfos}
+\end{array}\]
+\textbf{Derivaci'on de la f'ormula de integraci'on de Euler-Maclaurin}
+\[\longrightarrow \textit{uno de los usos de los polinomios de Bernoulli}\longleftarrow\]
+N'umeros de Bernoulli $\longrightarrow$ Polinomios de Bernoulli
+\[B_n\]
+\[\frac{t}{e^t-1}=\sum^{\infty}_{n=0}\frac{B_nt^n}{n!}\]
+Como $\frac{t}{e^t-1}=\sum^{\infty}_{n=0}\frac{B_nt^n}{n!}$ es una serie de Taylor se pueden identificar a $B_n$ como una sucesi'on de derivadas de la funci'on generadora valuadas en cero.
+\[\Rightarrow B_n=\frac{d^n}{dt^n}\left.\left(\frac{t}{e^t-1}\right)\right|_{t=0}\]
+\[
+\begin{array}{rl}
+	B_0=&\lim\limits_{n\to 0}\frac{t}{e^t-1}=1\\
+	\\
+	B_1=&\lim\limits_{n\to 0}\frac{d}{dt}\left.\left[\frac{t}{e^t-1}\right]\right|_{t=0}=-\frac{1}{2}\\
+	\\
+	B_1=& \lim\limits_{n\to 0}\left(\frac{1}{e^t-1}-\frac{te^t}{(e^t-1)^2}\right)\\
+	\\
+	B_1=& \lim\limits_{n\to 0}\left(\frac{e^t-1-te^t}{(e^t-1)^2}\right)=\lim\limits_{n\to 0}\frac{\cancel{e^t}-t\cancel{e^t}-\cancel{e^t}}{2(e^t-1)\cancel{e^t}}\\
+	\\
+	=& -\frac{1}{2}
+\end{array}\]
+\textbf{La f'ormula Euler-Maclaurin par aevaluar integrales definidas en $(0,\infty)$}
+\[
+\begin{array}{rl}
+	\int^{\infty}_0=&\frac{1}{2}f(0)+f(1)+f(2)+f(3...)\\
+	&+\frac{B_2}{2!}f'(0)+\frac{B_4}{4!}f^{(3)}(0)+\frac{B_6}{6!}f^{(5)}(0)
+\end{array}\]
+Donde $B_n$ son los n'umeros de Bernoulli
+\[B_2=\frac{1}{6},\ B_4=-\frac{1}{30},\ B_6=\frac{1}{42},\ B_8=-\frac{1}{30},...\]
+\[\int^{\infty}_0\frac{dx}{(z+x)^2}=\frac{1}{z}\]
+\begin{center}
+	z no est'a en el eje real negativo
+\end{center}
+\[f(1)+f(2)+f(3)+...=\sum^{\infty}_{n=1}\frac{1}{(z+n)^2}=\]
+\[
+\begin{array}{rl}
+	\textcolor{red}{\varphi^{(m)}(z+1)=&\frac{d^{m+1}}{dz^{m+1}}\ln \Gamma (z+1)}\\
+	\\
+	\underset{m=1,2,3...}{ }=& (-1)^{m+1}m!\sum^{\infty}_{n=2}\frac{1}{(z+n)^{m+1}}
+\end{array}
+\]
+\textbf{m=1}
+\[(-1)^2\cdot 1!\sum^{\infty}_{n=1}\frac{1}{(z+n)^2}=\varphi^{(1)}(z+1)\]
+\[f^{(2n+1)}_{(0)}=\left.\left(\frac{d}{dx}\right)^{2n-1}\frac{1}{(z+x)^2}\right|_{x=0}=-\frac{(2n)!}{z^{2n+1}}\]
+\[
+\begin{array}{rl}
+	\int^{\infty}_0f(x)dx=\int^{\infty}_0\frac{dx}{(z+x)^2}=&\frac{1}{z}=\frac{1}{2}\frac{1}{z^2}+\underbrace{\varphi ^{(1)}_{(z+1)}}_{\textcolor{red}{\textit{poligamma con m=1}}}-\frac{B_2}{z^3}-\frac{B_4}{z^5}-...\\
+	\varphi ^{(1)}_{(z+1)}=& \frac{d}{dz}\underbrace{\varphi (z+1)}_{digamma}\\
+	\varphi ^{(1)}_{(z+1)}=&\frac{1}{z}-\frac{1}{2z^2}+\frac{B_2}{z^3}+\frac{B_4}{z^5}+...\\
+	=& \frac{1}{z}-\frac{1}{2z^2}+\underbrace{\sum^{\infty}_{n=1}\frac{B_{2n}}{z^{2n+1}}}_{
+	\begin{tiny}
+	\begin{array}{c}
+		\textit{Es una serie asintotica}\\
+		\textit{que es util si se}\\
+		\textit{utilizan pocos t'erminos}
+	\end{array}		
+	\end{tiny}			
+	}
+\end{array}\]
+A; integrar $\varphi ^{(1)}_{(z+1)}$ obtenemos $\varphi _{(z+1)}$ [Digamma]
+\[
+\begin{array}{rl}
+	\varphi_{(z+1)}=& C_1+\ln z+\frac{1}{2z}-\frac{B_2}{2z^2}-\frac{B_4}{4z^4}-...\\
+	=& C_1
+\end{array}
+\]
 \end{document}
 
 
