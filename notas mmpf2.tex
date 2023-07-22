@@ -137,6 +137,7 @@ El residuo $R_n$ cuando $z=-n$ donde n es un entero mayor o igual a cero.\\
 	R_n=&\lim\limits_{n\to 0} (\epsilon\Gamma (-n+\epsilon))\\
 	=& \lim\limits_{n\to 0} \frac{\epsilon\Gamma (-n+1+\epsilon)}{-n+\epsilon}\\
 
+
 	=& \lim\limits_{n\to 0}\frac{\epsilon\Gamma (-n+2+\epsilon)}{(\n+\epsilon)(\n+1+\epsilon)}\\
 	=&\lim\limits_{n\to 0} \frac{\epsilon\Gamma (1+\epsilon)}{(-n+\epsilon)\cdot\cdot\cdot(\epsilon))}\\
 	=& \frac{(-1)^n}{n!}, \textit{el residuo alterna signos en } z=-n
@@ -443,6 +444,85 @@ A; integrar $\varphi ^{(1)}_{(z+1)}$ obtenemos $\varphi _{(z+1)}$ [Digamma]
 \begin{array}{rl}
 	\varphi_{(z+1)}=& C_1+\ln z+\frac{1}{2z}-\frac{B_2}{2z^2}-\frac{B_4}{4z^4}-...\\
 	=& C_1
+\end{array}
+\]
+\newpage
+\textbf{viernes 21 de julio}
+\textbf{F'ormula de stirling}
+\[
+\begin{array}{rl}
+	\varphi_{(z+1)}=& C_1 +\ln z+ \frac{1}{2z}-\frac{B_2}{2z^2}-\frac{B_4}{4z^4}-...\ \ \ B_{2n} \textit{ Números de Bernoulli}\\
+	=& C_1 +\ln z+ \frac{1}{2z}-\sum^{\infty}_{n=1}\frac{B_{2n}}{2nz^{2n}}
+\end{array}
+\]
+\[\textcolor{red}{\varphi_(z+1)\equiv \frac{d}{dz} \ln \Gamma (z+1)}\]
+\[
+\begin{array}{rl}
+	\ln \Gamma (z+1) =& C_2 +\left(z+\frac{1}{2}\right) \ln z + (c_1-1)z+\frac{B_2}{2z}+...+ \frac{B_{2n}}{2n(2n-1)z^{2n-1}}+...\\
+	\\
+	&\Rightarrow C_1=0\ y \ c_2=\frac{1}{2}\ln 2\pi\\
+	\\
+	\ln \Gamma (z+1) =&\frac{1}{2} \ln 2\pi + \left(z+\frac{1}{2}\right) \ln z -z+\frac{1}{12z}+\frac{1}{360z^3}+\frac{1}{1260z^5}+...\\
+\end{array}
+\]
+\[
+\begin{array}{rl}
+	\lim\limits_{n\to \infty}\frac{z!}{\sqrt{z}z^ze^{-z}}=& \sqrt{2\pi}\\
+	z!\approx &\sqrt{2\pi}\sqrt{z}z^ze^{-z}\\
+	\textcolor{blue}{\Gamma (z+1)\approx & \sqrt{2\pi} z^{z+\frac{1}{2}}e^{-z}}\\
+	\ln \Gamma (z+1) \approx & \frac{1}{2} \ln 2\pi +\left( z+\frac{1}{2}\right)(\ln z)-z\\
+	\ln n! \approx & n\ln n - n 
+\end{array}
+\]
+\textbf{\textcolor{red}{Ej.}}
+
+n es natural.
+\[
+\begin{array}{lcr}
+	\lim\limits_{n\to \infty} \sqrt[n]{n}=1 && \lim\limits_{n\to \infty} \sqrt[n^3]{n}=1\\
+	\\
+	&\lim\limits_{n\to \infty} \sqrt[n^3]{n^7}=1\\
+	\\
+	\lim\limits_{n\to \infty} \sqrt[p(n)]{q(n)}=1\\
+	\\
+	\textit{pero...}\\
+	\\
+	\lim\limits_{n\to \infty} \sqrt[n]{n!}=\infty
+\end{array}
+\]
+\[
+\begin{array}{rl}
+	\Rightarrow \lim\limits_{n\to \infty} \sqrt[n]{n!}=& \lim\limits_{n\to \infty}\sqrt[n]{\sqrt{2\pi}\sqrt{n}n^ne^{-n}}\\
+	\\
+	=& \lim\limits_{n\to \infty} \cancelto{1}{\sqrt[2n]{2\pi n}}\cdot n\cdot \cancelto{\frac{1}{e}}{e^{-1}}\\
+	\\
+	=& \infty
+\end{array}
+\]
+\[\lim\limits_{n\to \infty} \frac{2n!}{4^n(n+1)!n!}\textcolor{red}{=0}\]
+\[\textcolor{red}{
+\begin{array}{rl}
+	(n+1)!=& (n+1)n!(\sqrt{2\pi n } n^n e^{-n})\\
+	\\
+	2n!=& \sqrt{2\pi}\sqrt{2n}(2n)^{2n}e^{-2n}
+\end{array}
+}\]
+\[\lim\limits_{n\to \infty}\frac{\sqrt{2\pi} \sqrt{2n}\textcolor{red}{\cancel{\textcolor{black}{(2n)^{2n}}}\cancel{\textcolor{black}{(e)^{-2n}}}}}{\textcolor{red}{\cancel{\textcolor{black}{4^n}}}(n+1)(\sqrt{2\pi n}\cdot \cancelto{2\pi n}{n^n}\cancel{e^{-n}})^2}\]
+\[\lim\limits_{n\to \infty} \frac{\sqrt{\pi n}}{(n+1)(\pi n)}=0\]
+\textbf{\textcolor{red}{Ej.}}
+
+Un conjunto de N part'iculas distiguibles es asignado a los estados $\psi_i\ni i=1,2,...,M$. Si el n'umero de part'iculas en los diversos estados son $n_1,n_2,n_3,...,n_M$ (con $M\ll N$). El n'umero de formas que se pueden hacer es:
+\[w=\frac{N!}{n_1!n_2!...n_M!}\]
+La entrop'ia asociada es $S=k\ \ln w$ donde k es la constante de Boltzmann.\\
+En el l'imite cuando $N\to \infty$, con $n_i=P_i N$, ($P_i$ es la fracci'on del as part'iculas en le estado i). Encuentre S  en funci'on de $N$ y $P_i$.
+\[\textcolor{red}{\textit{Pista: } \sum_iP_i=1}\] 
+\textbf{Sol. }
+\[
+\begin{array}{rl}
+	\ln N!\approx & N\ln N-N\ \ \textit{usando la condici'on} \sum_in_i=N\\
+	S=k\ln W=& l \left[\ln N!- \ln n_i!\right]\\
+	\\
+	=& k\left[ (N\ln N-N)-\left(\sum^M_{i=1}n_i+nn_i-n_i\right)\right]
 \end{array}
 \]
 \end{document}
