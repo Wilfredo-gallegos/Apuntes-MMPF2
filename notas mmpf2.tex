@@ -61,7 +61,9 @@ Aplicando lo anterior a z=1,2,3...n
 \end{array}\]
 \textbf{Itegral Definida(Integral de Euler)}
 \[\Gamma (z)=\int^{\infty}_0 e^{-t}t^{z-1}dt,\ \ \ Re(z)>0\]
-Ej. como aparecen en f'isica
+\textbf{\textcolor{red}{Ej.}} 
+
+Como aparecen en f'isica
 \[\Gamma (z)= 2\int^{\infty}_0 e^{-t^2}t^{z+1}dt\ \ \ o \ \ \ \Gamma (z) = \int^1_0\left[ln(\frac{1}{t})\right]^{z-1}dt\]
 
 Si $z=\frac{1}{2}\Rightarrow \Gamma (\frac{1}{2}) = \sqrt{\pi}$ es integral error de Gauss
@@ -139,9 +141,7 @@ El residuo $R_n$ cuando $z=-n$ donde n es un entero mayor o igual a cero.\\
 \begin{array}{rl}
 	R_n=&\lim\limits_{n\to 0} (\epsilon\Gamma (-n+\epsilon))\\
 	=& \lim\limits_{n\to 0} \frac{\epsilon\Gamma (-n+1+\epsilon)}{-n+\epsilon}\\
-
-
-	=& \lim\limits_{n\to 0}\frac{\epsilon\Gamma (-n+2+\epsilon)}{(\n+\epsilon)(\n+1+\epsilon)}\\
+	=& \lim\limits_{n\to 0} \frac{\epsilon\Gamma (-n+2+\epsilon)}{(-n+\epsilon)(-n+1+\epsilon)}\\
 	=&\lim\limits_{n\to 0} \frac{\epsilon\Gamma (1+\epsilon)}{(-n+\epsilon)\cdot\cdot\cdot(\epsilon))}\\
 	=& \frac{(-1)^n}{n!}, \textit{el residuo alterna signos en } z=-n
 \end{array}
@@ -162,16 +162,16 @@ Esta integral es 'util cuando V no es entero.\\
 \[
 \begin{array}{rl}
 	\ln(\Gamma (z+1))=& z\cdot\Gamma (z)\\
-	=& \lim\limits_{n\to \infty}\frac{z}{z} \ln\left[\frac{n!\cdot n^z}{(z+1)(z_2)\cdot\cdot\cdot (z+n)\right]}\\
+	=& \lim\limits_{n\to \infty}\frac{z}{z} \ln\left[\frac{n!\cdot n^z}{(z+1)(z_2)\cdot\cdot\cdot (z+n)}\right]\\
 	\frac{d}{dz} \ln(\Gamma (z+1))=& \frac{d}{dz}\lim\limits_{n\to \infty}\left[\ln(n!)+z\cdot \ln(n)-\ln(z+1)-\ln(z+2)-...\ln(z+n)\right]\\
 	\frac{d}{dz}\ln (\Gamma (z+1))\equiv \underbrace{\varphi (z+1)}_{Funci'on\ digamma}=& \lim\limits_{n\to \infty}\left( \ln (n)-\frac{1}{z+1}-\frac{1}{z+2}\cdot\cdot\cdot -\frac{1}{z+n}\right)\\
 	&\\
-	\varphi (z+1)=& \frac{[\Gamma (z+1)]^'}{\Gamma (z+1)}
+	\varphi (z+1)=& \frac{[\Gamma (z+1)]'}{\Gamma (z+1)}
 \end{array}
 \]
 Si sumamos y restamos un n'umero arm'onico
 \[H_n=\sum^n_{m=1}\frac{1}{m}\]
-\[\varphi (z+1) =\lim\limits_{n\to \infty} \underbrace{\left[(\ln (n)-H_n)}_{=-\delta\textit{ cuando } n\to\infty}-\sum\left(\frac{1}{z+m}-\frac{1}{m\right)}\right]\]
+\[\varphi (z+1) =\lim\limits_{n\to \infty} \left[\underbrace{(\ln (n)-H_n)}_{=-\delta\textit{ cuando } n\to\infty}-\sum\left(\frac{1}{z+m}-\frac{1}{m}\right)\right]\]
 \[\Rightarrow \varphi (z+1) = -\delta +\sum^{\infty}_{m=1}\frac{z}{m(m+z)},\ \ \ \textit{si z=0}\Rightarrow\varphi (1)=-\delta\]
 para $n>0$, n entero.
 \[
@@ -203,7 +203,7 @@ converge en $|z|<1$ para $z=x\Rightarrow$ se puede calcular $\Gamma (z+1)$ para 
 \textbf{Suma de series}
 
 Transformar la serie por medio de fracciones parciales y expresar la serie infinita como sumas finitas de funciones gamma y poligamma.\\
-\textbf{EJEMPLO: }
+\textbf{\textcolor{red}{Ej.}}
 \[
 \begin{array}{rl}
 	\varphi ^{(m)} (z+2)=& \varphi^{(m)} (z+1)+(-1)^{m}\frac{m!}{(z+1)^{m+1}}\\
@@ -322,22 +322,23 @@ Si se sustituye $t=cos^2\theta$ y $dt=-2cos\theta sen\theta d\theta$
 \]
 \newpage
 \textbf{lunes 17 de julio}
-\textbf{Ejemplo}
+\textbf{\textcolor{red}{Ej.}}
 
 Una particula de masa m se mueve en un potencial sim'etrico esta descrito por $v(x)=A|x|^n$ y energ'ia total como $\frac{1}{2}m\left(\frac{dx}{dt}\right)^2 +v(x)=E$
 
 Resolviendo para $\frac{dx}{dt}$ e intgrando encontramos que el movimiento per'iodico es:
-\[\zeta=\sqrt{2m}\int^{X_{max}}_0\frac{dx}{(E-Ax)^{1\2}}\]
+\[\zeta=\sqrt{2m}\int^{X_{max}}_0 \frac{dx}{(E-Ax)^{1/2}}\]
 donde $X_{max}$ es el punto de innplexion clasico dado por $Ax_{max}^n=E$
 
 Muestre que:
 \[\uptau=\frac{2}{n}\sqrt{\frac{e\pi m}{E}}\left(\frac{E}{A}\right)^{1/2}\left[\frac{\Gamma (1/n)}{\Gamma (\frac{1}{n}+\frac{1}{2})}\right]\]
 \begin{center}
-\fbox{\begin{minipage}{30em}
+\fbox{
+\begin{minipage}{30em}
   \[B(p+1,q+1)=B(1/n,1/2)=\int^1_0t^p(1-t^qdt)\]
   \[\textcolor{green}{\frac{1}{n}=p+1\Rightarrow p=\frac{1}{n}-1}\]
-  \[\textcolor{green}{\frac{1}{2}=q+1\Rightarrowq=\frac{1}{2}-2}\]
-  \[\textcolor{green}{\int^1_0t^{\frac{1}{n}-1}(1-t)^{-1\2}}\]
+  \[\textcolor{green}{\frac{1}{2}=q+1\Rightarrow q=\frac{1}{2}-2}\]
+  \[\textcolor{green}{\int^1_0t^{\frac{1}{n}-1}(1-t)^{-1/2}}\]
 \end{minipage}}
 \end{center}
 \[\textcolor{red}{t=\frac{Ax^n}{E}}\Rightarrow \left(\frac{Et}{A}\right)^{1/n}\]
@@ -404,7 +405,7 @@ Como $\frac{t}{e^t-1}=\sum^{\infty}_{n=0}\frac{B_nt^n}{n!}$ es una serie de Tayl
 	\\
 	=& -\frac{1}{2}
 \end{array}\]
-\textbf{La f'ormula Euler-Maclaurin par aevaluar integrales definidas en $(0,\infty)$}
+\textbf{La f'ormula Euler-Maclaurin para evaluar integrales definidas en $(0,\infty)$}
 \[
 \begin{array}{rl}
 	\int^{\infty}_0=&\frac{1}{2}f(0)+f(1)+f(2)+f(3...)\\
@@ -419,7 +420,7 @@ Donde $B_n$ son los n'umeros de Bernoulli
 \[f(1)+f(2)+f(3)+...=\sum^{\infty}_{n=1}\frac{1}{(z+n)^2}=\]
 \[
 \begin{array}{rl}
-	\textcolor{red}{\varphi^{(m)}(z+1)=&\frac{d^{m+1}}{dz^{m+1}}\ln \Gamma (z+1)}\\
+	\textcolor{red}{\varphi^{(m)}(z+1)}=&\textcolor{red}{\frac{d^{m+1}}{dz^{m+1}}\ln \Gamma (z+1)}\\
 	\\
 	\underset{m=1,2,3...}{ }=& (-1)^{m+1}m!\sum^{\infty}_{n=2}\frac{1}{(z+n)^{m+1}}
 \end{array}
@@ -472,7 +473,7 @@ A; integrar $\varphi ^{(1)}_{(z+1)}$ obtenemos $\varphi _{(z+1)}$ [Digamma]
 \begin{array}{rl}
 	\lim\limits_{n\to \infty}\frac{z!}{\sqrt{z}z^ze^{-z}}=& \sqrt{2\pi}\\
 	z!\approx &\sqrt{2\pi}\sqrt{z}z^ze^{-z}\\
-	\textcolor{blue}{\Gamma (z+1)\approx & \sqrt{2\pi} z^{z+\frac{1}{2}}e^{-z}}\\
+	\textcolor{blue}{\Gamma (z+1)\approx} & \textcolor{blue}{\sqrt{2\pi} z^{z+\frac{1}{2}}e^{-z}}\\
 	\ln \Gamma (z+1) \approx & \frac{1}{2} \ln 2\pi +\left( z+\frac{1}{2}\right)(\ln z)-z\\
 	\ln n! \approx & n\ln n - n 
 \end{array}
@@ -569,7 +570,7 @@ En el l'imite cuando $N\to \infty$, con $n_i=P_i N$, ($P_i$ es la fracci'on del 
 \end{array}
 \]
 Otra forma de definir Zeta de Riemann
-\[\zeta (s)=\prod^{\infty}_{primos=p=2}(1-p^{-s})^{-1}\]
+\[\zeta (s)=\prod^{\infty}_{\parbox{2em}{\footnotesize primos p= 2}}(1-p^{-s})^{-1}\]
 franja cr'itica:
 \[
 \begin{array}{rll}
@@ -591,12 +592,12 @@ franja cr'itica:
 	\end{array}}	& \textcolor{blue}{\begin{array}{cc}
 		v=-\frac{1}{e^x-1}\\
 		dv=\frac{e^x}{(e^x-1)^2}dx
-	\end{array}\\
+	\end{array}}\\
 	\\
 	=&-\cancelto{0}{\left.\frac{x^n}{e^x-1}\right|^{\infty}_0}-\int^{\infty}_0-\frac{1}{e^x-1}nx^{n-1}dx&& \zeta (z)=\frac{1}{\Gamma (z)}\int^{\infty}_0 \frac{t^{z-1}}{e^t-1}dt\\
 	\\
 	=&\int^{\infty}_0 \frac{x^{n-1}}{e^x-1}dx=n(n+1)!\zeta (z)
-\end{array}}
+\end{array}
 \]
 \section*{Funciones Incompletas}
 \textbf{\underline{Gamma incompleta}}
@@ -629,7 +630,7 @@ Cuando a=0
 \[\Gamma (0,x)\sim \frac{e^x}{x}\sum^{\infty}_{n=0}(-1)^n \frac{n!}{x^n}\]
 \textbf{\underline{Beta Incompleta}}
 \[
-\begin{array}{rl}
+\begin{array}{rlr}
 	B_x (p,q)=&\int^{x}_0t^{p-1}(1-t)^{z-1}dt
 	& 0\leq x\leq 1,p>0,q>0
 \end{array}
