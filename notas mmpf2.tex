@@ -9,6 +9,7 @@
 
 % Useful packages
 
+\usepackage{blindtext}
 \usepackage{verbatim}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -25,6 +26,8 @@
 \usepackage{upgreek}
 \newcommand{\bigslant}[2]{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}
 \usepackage{xcolor}
+\usepackage{multicol}
+%\setlength{\columnseprule}{1pt}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 
 \title{Metodos matemáticos 2}
@@ -525,6 +528,118 @@ En el l'imite cuando $N\to \infty$, con $n_i=P_i N$, ($P_i$ es la fracci'on del 
 	=& k\left[ (N\ln N-N)-\left(\sum^M_{i=1}n_i+nn_i-n_i\right)\right]
 \end{array}
 \]
+
+
+\newpage
+\textbf{lunes 24 de julio}
+
+\[
+\begin{array}{rlr}
+	\zeta (z) =& \sum^{\infty}_{n=1} n^{-z} & \textit{por definici'on}\\
+	\zeta (z) =& \int^{\infty}_{0}\frac{u^{z-1}}{e^u-1}du
+\end{array}
+\]
+\[
+\begin{array}{lcl}
+	\zeta (1)=\infty && \zeta (2) =\frac{\pi^2}{6}=\sum^{\infty}_{n=1}\frac{1}{n^2}\\
+	\zeta (3) = 1.202056 && \zeta (4)=\frac{\pi^4}{90}\\
+	\zeta (5) = 1.0369 &&  \zeta (6) = \frac{\pi^6}{945}\\
+	&Re(z)>1
+\end{array}
+\]
+\hfill
+\[
+\begin{array}{rl}
+	\zeta (-1)=& \frac{1}{1^{-1}}+\frac{1}{2^{-1}}+...\\
+	=& 1+2+3+4+...\\
+	=&-\frac{1}{12}
+\end{array}
+\]
+\begin{center}
+	$\zeta(-2n)=0$\\
+	Ceros "triviales"
+\end{center}
+
+\[
+\begin{array}{lccc}
+	\begin{array}{ll}
+		z=2+i\\
+		n=\frac{1}{2}
+	\end{array} & n^z=&\frac{1}{2}^{2+i}=& \frac{1}{2}^2\frac{1}{2}^i
+\end{array}
+\]
+Otra forma de definir Zeta de Riemann
+\[\zeta (s)=\prod^{\infty}_{primos=p=2}(1-p^{-s})^{-1}\]
+franja cr'itica:
+\[
+\begin{array}{rll}
+	\zeta (z)=& \frac{1}{\Gamma (z)}\int^{\infty}_0\frac{t^{z-1}}{e^t-1}dt\frac{e^{-t}}{e^{-t}}=\frac{1}{\Gamma (z)}\int^{\infty}_0\frac{t^{z-1}\cdot e^{-t}}{1-e^{-t}}\\
+	\\
+	=& \int^{\infty}_0 t^{z-1}e^{-t}\sum^{\infty}_{m=1}e^{-mt}dt & \textcolor{blue}{\left(\frac{1}{1-x}=\sum^{\infty}_{m=0}x^m\right)}\\
+	\\
+	=& \frac{1}{\Gamma (z)} \int^{\infty}_0 t^{z-1} \sum^{\infty}_{m=1} e^{-mt}dt &=\frac{1}{\Gamma (z)}\int^{\infty}_0\sum^{\infty}_{m=1}\left(\frac{x}{m}\right)^{z-1}e^{-x}\frac{dx}{m}\\ 
+	\\
+	&&=\frac{1}{\Gamma (z)}\left(\sum^{\infty}_{m=1} \frac{1}{m^z}\right)\int^{\infty}_0x^{z-1}e^{-x}dx
+\end{array}
+\]
+\textbf{\textcolor{red}{Ej.}}
+\[
+\begin{array}{rlcc}
+	\int^{\infty}_0 \frac{x^n\cdot e^x}{(e^x-1)^2}dx=&n!\zeta (n) &\textcolor{blue}{\begin{array}{cc}
+		u=x^n\\
+		du=nx^{n-1}dx
+	\end{array}}	& \textcolor{blue}{\begin{array}{cc}
+		v=-\frac{1}{e^x-1}\\
+		dv=\frac{e^x}{(e^x-1)^2}dx
+	\end{array}\\
+	\\
+	=&-\cancelto{0}{\left.\frac{x^n}{e^x-1}\right|^{\infty}_0}-\int^{\infty}_0-\frac{1}{e^x-1}nx^{n-1}dx&& \zeta (z)=\frac{1}{\Gamma (z)}\int^{\infty}_0 \frac{t^{z-1}}{e^t-1}dt\\
+	\\
+	=&\int^{\infty}_0 \frac{x^{n-1}}{e^x-1}dx=n(n+1)!\zeta (z)
+\end{array}}
+\]
+\section*{Funciones Incompletas}
+\textbf{\underline{Gamma incompleta}}
+\[
+\begin{array}{rlr}
+	\delta (a,x)=& \int^x_0e^{-t}t^{a-1}dt& R(a)>0\\
+	\\
+	\Gamma (a,x)=&\int^{\infty}_x e^{-t}t^{a-1}dt\\
+	\\
+	\delta (a,x)+ \Gamma (a,x)=& Gamma(a)=\Gamma (a)
+\end{array}
+\]
+
+Cuando a es entero:
+\[
+\begin{array}{rl}
+	\delta (n,x)=& (n-1)!\left(1-e^{-x}\sum^{n-1}_{s=0}\frac{x^s}{s!}\right)\\
+	\\
+	\Gamma (n,x)=&(n-1)!e^{-x}\sum^{n-1}_{s=0}\frac{x^s}{s!}
+\end{array}
+\]
+Cuando a no es entero:
+\[
+\begin{array}{rll}
+	\delta (a,x)\rightarrow & \textit{serie de potencias para x pequeno} &\Rightarrow \delta (a,x)=x^a\sum^{\infty}_{n=0}(-1)^n\frac{x^n}{n!(a+n)}\\
+	\Gamma (a,x)\rightarrow & \textit{serie asint'otica} &\Rightarrow \Gamma (a,x)\sim x^{a-1}e^{-x}\sum^{\infty}_{n=0}\frac{\Gamma (a)}{\Gamma (a-n)}\cdot\frac{1}{x^n}
+\end{array}
+\]
+Cuando a=0
+\[\Gamma (0,x)\sim \frac{e^x}{x}\sum^{\infty}_{n=0}(-1)^n \frac{n!}{x^n}\]
+\textbf{\underline{Beta Incompleta}}
+\[
+\begin{array}{rl}
+	B_x (p,q)=&\int^{x}_0t^{p-1}(1-t)^{z-1}dt
+	& 0\leq x\leq 1,p>0,q>0
+\end{array}
+\]
+\[Si\ \ x=0\Rightarrow B(p,q) \textit{funci'on Beta}\]
+\textcolor{blue}{Aparece en:\\
+\begin{itemize}
+	\item Funciones hipergeom'etricas
+	\item Probabilidades
+\end{itemize}}
 \end{document}
 
 
