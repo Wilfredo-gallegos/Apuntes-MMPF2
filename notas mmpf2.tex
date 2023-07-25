@@ -38,7 +38,7 @@
 
 \textbf{viernes 7 de julio}
 \section{Función Gamma}
-\textbf{L'imite al infinito(Euler)}\\
+\textbf{Límite al infinito(Euler)}\\
 
 \[\begin{array}{rl}
 	\Gamma (z)\equiv & \lim\limits_{n\to \infty} \frac{1\cdot 2\cdot 3\cdot\cdot\cdot n}{z(z+1)(z+2)\cdot\cdot\cdot (z+n)}n^z,\ \ \ z\in\mathbb{Z}^{+}\ o\ z\in\mathbb{C}\\
@@ -63,7 +63,7 @@ Aplicando lo anterior a z=1,2,3...n
 \[\Gamma (z)=\int^{\infty}_0 e^{-t}t^{z-1}dt,\ \ \ Re(z)>0\]
 \textbf{\textcolor{red}{Ej.}} 
 
-Como aparecen en f'isica
+Como aparecen en física
 \[\Gamma (z)= 2\int^{\infty}_0 e^{-t^2}t^{z+1}dt\ \ \ o \ \ \ \Gamma (z) = \int^1_0\left[ln(\frac{1}{t})\right]^{z-1}dt\]
 
 Si $z=\frac{1}{2}\Rightarrow \Gamma (\frac{1}{2}) = \sqrt{\pi}$ es integral error de Gauss
@@ -72,7 +72,7 @@ Si $z=\frac{1}{2}\Rightarrow \Gamma (\frac{1}{2}) = \sqrt{\pi}$ es integral erro
 \[\Rightarrow F(z,n)=\int^n_0\left(1-\frac{t}{n}\right)^nt^{z-1}dt = \int^1_0 (1-u)^n(un)^{z-1}ndu\ni u=\frac{t}{n}\]
 \[\frac{F(z,n)}{n^z}=\int^1_0 (1-u)^n(u)^{z-1}du\]\\
 
-Ahora por integraci'on por partes usando $u=(1-u)^n$, $du=n(1-u)^{n-1}du$, $v=\frac{u^z}{z}$, $dv=u^{z-1}du$ tenemos
+Ahora por integración por partes usando $u=(1-u)^n$, $du=n(1-u)^{n-1}du$, $v=\frac{u^z}{z}$, $dv=u^{z-1}du$ tenemos
 \[
 \begin{array}{rl}
 	\frac{F(z,n)}{n^z}=& (1-u)^n \left.\frac{u^z}{z}\right|^1_0-\int^1_0\frac{u^z}{z} n(1-u)^{n-1}du\\
@@ -88,20 +88,20 @@ Ahora por integraci'on por partes usando $u=(1-u)^n$, $du=n(1-u)^{n-1}du$, $v=\f
 	$\delta$ := 0.5772156619
 \end{center}
 
-\textbf{Ecuaci'on estad'istica de Maxwell-Boltzmann}
+\textbf{Ecuación estadística de Maxwell-Boltzmann}
 \[\begin{array}{lcl}
 	&& \textit{K es la constante de Boltzmann}\\
 	e^{-E/KT} && \textit{T es la temperatura absoluta}\\
-	&& \textit{E(energ'ia): estado de energ'ia ocupada}
+	&& \textit{E(energía): estado de energía ocupada}
 
 \end{array}\]
 
-probabilidad de estar en estado de energ'ia es $Y_{kt}=\beta$
+probabilidad de estar en estado de energía es $Y_{kt}=\beta$
 
 \[\begin{array}{lcl}
 	P(E)=Ce^{-\beta E} && \textit{Para un gas idel sin estructura}\\
 	n(E)dE && n(E)^{1/2}\\
-	1=C\int n(E) e^{-\beta E}dE && \textit{E=energ'ia cin'etica}
+	1=C\int n(E) e^{-\beta E}dE && \textit{E=energía cinética}
 \end{array}\]
 \par\noindent\rule{\textwidth}{0.5pt}
 \[
@@ -119,13 +119,13 @@ probabilidad de estar en estado de energ'ia es $Y_{kt}=\beta$
 \textbf{Relaciones de funciones}
 
 \[\Gamma (z+1) = z\Gamma (z)\]
-\textbf{Fomula de reflexi'on}
+\textbf{Fomula de reflexión}
 
 \[\Gamma (z)\Gamma (1-z) = \frac{\pi}{sen(z\pi)}\]
-\textbf{F'ormuláde duplicaci'on de Legendre}
+\textbf{Fórmuláde duplicación de Legendre}
 
 \[\Gamma (1+z)\Gamma (z+\frac{1}{2}) = 2^{-2z}\sqrt{\pi}\Gamma (2z+1) \]
-\textbf{Notac'i'on doble factorial: }
+\textbf{Notacíón doble factorial: }
 \[
 \begin{array}{rl}
 	(2n+1)!!=& 1\cdot 3\cdot 5\cdot\cdot\cdot (2n+1)=\frac{(2n+1)!}{2^nn}\\
@@ -133,7 +133,7 @@ probabilidad de estar en estado de energ'ia es $Y_{kt}=\beta$
 	(-1)!!=& 1
 \end{array}
 \]
-\textbf{PROPIEDADES ANAL'ITICAS}
+\textbf{PROPIEDADES ANALíTICAS}
 
 $[\Gamma (z)]^{-1}$ tiene singularidades en $z=0,-1,-2...$ y no tiene cuando  $z=-1,2,3...$ y no tiene ceros en el plano complejo finito positivo.\\
 El residuo $R_n$ cuando $z=-n$ donde n es un entero mayor o igual a cero.\\
@@ -154,22 +154,22 @@ donde C es el contorno
 \includegraphics[scale=0.4]{../grafico 1.png} 
 \end{center}
 
-Esta integral es 'util cuando V no es entero.\\
-\textbf{Notaci'on factorial:}
+Esta integral es útil cuando V no es entero.\\
+\textbf{Notación factorial:}
 \[\prod (z)=z!=\Gamma (z+1)\]
-\textbf{Funci'on Digamma}
+\textbf{Función Digamma}
 
 \[
 \begin{array}{rl}
 	\ln(\Gamma (z+1))=& z\cdot\Gamma (z)\\
 	=& \lim\limits_{n\to \infty}\frac{z}{z} \ln\left[\frac{n!\cdot n^z}{(z+1)(z_2)\cdot\cdot\cdot (z+n)}\right]\\
 	\frac{d}{dz} \ln(\Gamma (z+1))=& \frac{d}{dz}\lim\limits_{n\to \infty}\left[\ln(n!)+z\cdot \ln(n)-\ln(z+1)-\ln(z+2)-...\ln(z+n)\right]\\
-	\frac{d}{dz}\ln (\Gamma (z+1))\equiv \underbrace{\varphi (z+1)}_{Funci'on\ digamma}=& \lim\limits_{n\to \infty}\left( \ln (n)-\frac{1}{z+1}-\frac{1}{z+2}\cdot\cdot\cdot -\frac{1}{z+n}\right)\\
+	\frac{d}{dz}\ln (\Gamma (z+1))\equiv \underbrace{\varphi (z+1)}_{Función\ digamma}=& \lim\limits_{n\to \infty}\left( \ln (n)-\frac{1}{z+1}-\frac{1}{z+2}\cdot\cdot\cdot -\frac{1}{z+n}\right)\\
 	&\\
 	\varphi (z+1)=& \frac{[\Gamma (z+1)]'}{\Gamma (z+1)}
 \end{array}
 \]
-Si sumamos y restamos un n'umero arm'onico
+Si sumamos y restamos un número armónico
 \[H_n=\sum^n_{m=1}\frac{1}{m}\]
 \[\varphi (z+1) =\lim\limits_{n\to \infty} \left[\underbrace{(\ln (n)-H_n)}_{=-\delta\textit{ cuando } n\to\infty}-\sum\left(\frac{1}{z+m}-\frac{1}{m}\right)\right]\]
 \[\Rightarrow \varphi (z+1) = -\delta +\sum^{\infty}_{m=1}\frac{z}{m(m+z)},\ \ \ \textit{si z=0}\Rightarrow\varphi (1)=-\delta\]
@@ -180,26 +180,26 @@ para $n>0$, n entero.
 	=& -\delta+H_n
 \end{array}
 \]
-\textbf{Funci'on Poligamma}
+\textbf{Función Poligamma}
 
-Cuando se deriva muchas veces la funci'on digamma
+Cuando se deriva muchas veces la función digamma
 \[
 \begin{array}{rl}
 	\varphi^{(m)} (z+1) \equiv& \frac{d^{m+1}}{dz^{m+1}}\ln\Gamma (z+1)\\
 	\varphi^{(m)} (z+1)=& (-1)^{m+1}m!\sum^{\infty}_{n=1}\frac{1}{(z+n)^{m+1}},\ \ \ m=1,2,3...
 \end{array}
 \]
-Si z=0 la funci'on se conoce como zeta de Riemann
+Si z=0 la función se conoce como zeta de Riemann
 \[\zeta (m) = \sum^{\infty}_{n-1}\frac{1}{n^m}\]
 \[\Rightarrow \varphi^{(m)}_{(1)}=(-1)^{m+1}\cdot m!\cdot \zeta (m+1),\ \ \ m=1,2,3...\]
-\textbf{Expansi'on de Maclaurin}
+\textbf{Expansión de Maclaurin}
 \[
 \begin{array}{rl}
 	\ln\Gamma (z+1) =& \sum^{\infty}_{n=1}\frac{z^n}{n!}\varphi^{(n-1)}_{(1)}\\
 	=& -\delta\cdot z +\sum^{\infty}_{n=2}(-1)^n\frac{z^n}{n}\zeta (n)
 \end{array}
 \]
-converge en $|z|<1$ para $z=x\Rightarrow$ se puede calcular $\Gamma (z+1)$ para n'umeros reales o complejos.\\
+converge en $|z|<1$ para $z=x\Rightarrow$ se puede calcular $\Gamma (z+1)$ para números reales o complejos.\\
 \textbf{Suma de series}
 
 Transformar la serie por medio de fracciones parciales y expresar la serie infinita como sumas finitas de funciones gamma y poligamma.\\
@@ -237,12 +237,12 @@ Demuestre  que:
 \newpage
 \textbf{viernes 14 de julio}
 
-\textbf{La Funci'on Beta}
+\textbf{La Función Beta}
 
 \[\Gamma (p+q)\propto \Gamma (p)\Gamma (q)\]
 \[
 \begin{array}{rl}
-	n!= \Gamma (n+1)\& \int^{\infty}_0 e^{-t}t^2 dt,\ \ \textit{Variante de gamma para definir la funi'on beta}\\
+	n!= \Gamma (n+1)\& \int^{\infty}_0 e^{-t}t^2 dt,\ \ \textit{Variante de gamma para definir la funión beta}\\
 	\Gamma (m)\Gamma (n)=& \int^{\infty}_0 e^{-u}u^m fu\int^{\infty}_0 e^{-v}v^n dv
 \end{array}
 \]
@@ -304,7 +304,7 @@ Usando el jacobiano
 \begin{center}
 \fbox{\begin{minipage}{15em}
   \[b(p,q)=\frac{\Gamma (q)\Gamma (p)}{\Gamma (q+p)}\]
-\end{minipage}} definici'on de funci'on beta
+\end{minipage}} definición de función beta
 \end{center}
 \[b(p,q)=b(q,p)\]
 Si se sustituye $t=cos^2\theta$ y $dt=-2cos\theta sen\theta d\theta$
@@ -324,9 +324,9 @@ Si se sustituye $t=cos^2\theta$ y $dt=-2cos\theta sen\theta d\theta$
 \textbf{lunes 17 de julio}
 \textbf{\textcolor{red}{Ej.}}
 
-Una particula de masa m se mueve en un potencial sim'etrico esta descrito por $v(x)=A|x|^n$ y energ'ia total como $\frac{1}{2}m\left(\frac{dx}{dt}\right)^2 +v(x)=E$
+Una particula de masa m se mueve en un potencial simétrico esta descrito por $v(x)=A|x|^n$ y energía total como $\frac{1}{2}m\left(\frac{dx}{dt}\right)^2 +v(x)=E$
 
-Resolviendo para $\frac{dx}{dt}$ e intgrando encontramos que el movimiento per'iodico es:
+Resolviendo para $\frac{dx}{dt}$ e intgrando encontramos que el movimiento períodico es:
 \[\zeta=\sqrt{2m}\int^{X_{max}}_0 \frac{dx}{(E-Ax)^{1/2}}\]
 donde $X_{max}$ es el punto de innplexion clasico dado por $Ax_{max}^n=E$
 
@@ -356,9 +356,9 @@ Muestre que:
 \[\ln (n!)\rightsquigarrow \ln \Gamma (z)\]
 para z no entero, $|z|$ muy grande, no Series de Maclaurin
 \[\Gamma (z+1)=z\Gamma (z)\]
-Se usa una expansi'on asint'otica para $\ln (\Gamma (z))$ esta expansi'on es la que se conoce como \textcolor{red}{Serie de Stirling} o \textcolor{red}{Formula de Stirling}
+Se usa una expansión asintótica para $\ln (\Gamma (z))$ esta expansión es la que se conoce como \textcolor{red}{Serie de Stirling} o \textcolor{red}{Formula de Stirling}
 
-\textbf{Series asint'oticas$\to$ Series semi-convergentes$\to$Series de Poincar'e}
+\textbf{Series asintóticas$\to$ Series semi-convergentes$\to$Series de Poincaré}
 
 Se consideran 2 tipos de integrales 
 \[
@@ -368,30 +368,30 @@ Se consideran 2 tipos de integrales
 	I_2 (x)=& \int^{\infty}_0e^{-u}f\left(\frac{u}{x}\right)du
 \end{array}
 \]
-Qu'e podemos hacer con las series asint'oticas:
+Qué podemos hacer con las series asintóticas:
 \begin{enumerate}
-	\item Si multiplicamos 2 series asint'oticas vamos a tener otra serie asint'otica.
-	\item Se pueden integrar t'ermino a t'ermino u el resultado ser'a, otra serie asintotica de la forma
+	\item Si multiplicamos 2 series asintóticas vamos a tener otra serie asintótica.
+	\item Se pueden integrar término a término u el resultado será, otra serie asintotica de la forma
 	\[\int^{\infty}_xf(x)dx\]
-	\item La diferenciaci'on es v'alido 'unicamente bajo ciertas condiciones.
+	\item La diferenciación es válido únicamente bajo ciertas condiciones.
 \end{enumerate}
 
-M'etodo para generar una serie asint'otica:
+Método para generar una serie asintótica:
 \[\begin{array}{ll}
-	\textbf{M'etodo de Steepest Descents}
+	\textbf{Método de Steepest Descents}
 	&\left\}\begin{array}{ll}
 		\textit{a lo largo del camino}\\
-		\textit{m'aximo decrecimiento}	
+		\textit{máximo decrecimiento}	
 	\end{array}\right.\\
 	\to \textit{Saddle point}\to \textit{punto silla}\\
-	\to \textit{M'etodo de integrandos Holomorfos}
+	\to \textit{Método de integrandos Holomorfos}
 \end{array}\]
-\textbf{Derivaci'on de la f'ormula de integraci'on de Euler-Maclaurin}
+\textbf{Derivación de la fórmula de integración de Euler-Maclaurin}
 \[\longrightarrow \textit{uno de los usos de los polinomios de Bernoulli}\longleftarrow\]
-N'umeros de Bernoulli $\longrightarrow$ Polinomios de Bernoulli
+Números de Bernoulli $\longrightarrow$ Polinomios de Bernoulli
 \[B_n\]
 \[\frac{t}{e^t-1}=\sum^{\infty}_{n=0}\frac{B_nt^n}{n!}\]
-Como $\frac{t}{e^t-1}=\sum^{\infty}_{n=0}\frac{B_nt^n}{n!}$ es una serie de Taylor se pueden identificar a $B_n$ como una sucesi'on de derivadas de la funci'on generadora valuadas en cero.
+Como $\frac{t}{e^t-1}=\sum^{\infty}_{n=0}\frac{B_nt^n}{n!}$ es una serie de Taylor se pueden identificar a $B_n$ como una sucesión de derivadas de la función generadora valuadas en cero.
 \[\Rightarrow B_n=\frac{d^n}{dt^n}\left.\left(\frac{t}{e^t-1}\right)\right|_{t=0}\]
 \[
 \begin{array}{rl}
@@ -405,17 +405,17 @@ Como $\frac{t}{e^t-1}=\sum^{\infty}_{n=0}\frac{B_nt^n}{n!}$ es una serie de Tayl
 	\\
 	=& -\frac{1}{2}
 \end{array}\]
-\textbf{La f'ormula Euler-Maclaurin para evaluar integrales definidas en $(0,\infty)$}
+\textbf{La fórmula Euler-Maclaurin para evaluar integrales definidas en $(0,\infty)$}
 \[
 \begin{array}{rl}
 	\int^{\infty}_0=&\frac{1}{2}f(0)+f(1)+f(2)+f(3...)\\
 	&+\frac{B_2}{2!}f'(0)+\frac{B_4}{4!}f^{(3)}(0)+\frac{B_6}{6!}f^{(5)}(0)
 \end{array}\]
-Donde $B_n$ son los n'umeros de Bernoulli
+Donde $B_n$ son los números de Bernoulli
 \[B_2=\frac{1}{6},\ B_4=-\frac{1}{30},\ B_6=\frac{1}{42},\ B_8=-\frac{1}{30},...\]
 \[\int^{\infty}_0\frac{dx}{(z+x)^2}=\frac{1}{z}\]
 \begin{center}
-	z no est'a en el eje real negativo
+	z no está en el eje real negativo
 \end{center}
 \[f(1)+f(2)+f(3)+...=\sum^{\infty}_{n=1}\frac{1}{(z+n)^2}=\]
 \[
@@ -438,7 +438,7 @@ Donde $B_n$ son los n'umeros de Bernoulli
 	\begin{array}{c}
 		\textit{Es una serie asintotica}\\
 		\textit{que es util si se}\\
-		\textit{utilizan pocos t'erminos}
+		\textit{utilizan pocos términos}
 	\end{array}		
 	\end{tiny}			
 	}
@@ -452,7 +452,7 @@ A; integrar $\varphi ^{(1)}_{(z+1)}$ obtenemos $\varphi _{(z+1)}$ [Digamma]
 \]
 \newpage
 \textbf{viernes 21 de julio}
-\textbf{F'ormula de stirling}
+\textbf{Fórmula de stirling}
 \[
 \begin{array}{rl}
 	\varphi_{(z+1)}=& C_1 +\ln z+ \frac{1}{2z}-\frac{B_2}{2z^2}-\frac{B_4}{4z^4}-...\ \ \ B_{2n} \textit{ Números de Bernoulli}\\
@@ -515,15 +515,15 @@ n es natural.
 \[\lim\limits_{n\to \infty} \frac{\sqrt{\pi n}}{(n+1)(\pi n)}=0\]
 \textbf{\textcolor{red}{Ej.}}
 
-Un conjunto de N part'iculas distiguibles es asignado a los estados $\psi_i\ni i=1,2,...,M$. Si el n'umero de part'iculas en los diversos estados son $n_1,n_2,n_3,...,n_M$ (con $M\ll N$). El n'umero de formas que se pueden hacer es:
+Un conjunto de N partículas distiguibles es asignado a los estados $\psi_i\ni i=1,2,...,M$. Si el número de partículas en los diversos estados son $n_1,n_2,n_3,...,n_M$ (con $M\ll N$). El número de formas que se pueden hacer es:
 \[w=\frac{N!}{n_1!n_2!...n_M!}\]
-La entrop'ia asociada es $S=k\ \ln w$ donde k es la constante de Boltzmann.\\
-En el l'imite cuando $N\to \infty$, con $n_i=P_i N$, ($P_i$ es la fracci'on del as part'iculas en le estado i). Encuentre S  en funci'on de $N$ y $P_i$.
+La entropía asociada es $S=k\ \ln w$ donde k es la constante de Boltzmann.\\
+En el límite cuando $N\to \infty$, con $n_i=P_i N$, ($P_i$ es la fracción del as partículas en le estado i). Encuentre S  en función de $N$ y $P_i$.
 \[\textcolor{red}{\textit{Pista: } \sum_iP_i=1}\] 
 \textbf{Sol. }
 \[
 \begin{array}{rl}
-	\ln N!\approx & N\ln N-N\ \ \textit{usando la condici'on} \sum_in_i=N\\
+	\ln N!\approx & N\ln N-N\ \ \textit{usando la condición} \sum_in_i=N\\
 	S=k\ln W=& l \left[\ln N!- \ln n_i!\right]\\
 	\\
 	=& k\left[ (N\ln N-N)-\left(\sum^M_{i=1}n_i+nn_i-n_i\right)\right]
@@ -536,7 +536,7 @@ En el l'imite cuando $N\to \infty$, con $n_i=P_i N$, ($P_i$ es la fracci'on del 
 
 \[
 \begin{array}{rlr}
-	\zeta (z) =& \sum^{\infty}_{n=1} n^{-z} & \textit{por definici'on}\\
+	\zeta (z) =& \sum^{\infty}_{n=1} n^{-z} & \textit{por definición}\\
 	\zeta (z) =& \int^{\infty}_{0}\frac{u^{z-1}}{e^u-1}du
 \end{array}
 \]
@@ -571,7 +571,7 @@ En el l'imite cuando $N\to \infty$, con $n_i=P_i N$, ($P_i$ es la fracci'on del 
 \]
 Otra forma de definir Zeta de Riemann
 \[\zeta (s)=\prod^{\infty}_{\parbox{2em}{\footnotesize primos p= 2}}(1-p^{-s})^{-1}\]
-franja cr'itica:
+franja crítica:
 \[
 \begin{array}{rll}
 	\zeta (z)=& \frac{1}{\Gamma (z)}\int^{\infty}_0\frac{t^{z-1}}{e^t-1}dt\frac{e^{-t}}{e^{-t}}=\frac{1}{\Gamma (z)}\int^{\infty}_0\frac{t^{z-1}\cdot e^{-t}}{1-e^{-t}}\\
@@ -623,7 +623,7 @@ Cuando a no es entero:
 \[
 \begin{array}{rll}
 	\delta (a,x)\rightarrow & \textit{serie de potencias para x pequeno} &\Rightarrow \delta (a,x)=x^a\sum^{\infty}_{n=0}(-1)^n\frac{x^n}{n!(a+n)}\\
-	\Gamma (a,x)\rightarrow & \textit{serie asint'otica} &\Rightarrow \Gamma (a,x)\sim x^{a-1}e^{-x}\sum^{\infty}_{n=0}\frac{\Gamma (a)}{\Gamma (a-n)}\cdot\frac{1}{x^n}
+	\Gamma (a,x)\rightarrow & \textit{serie asintótica} &\Rightarrow \Gamma (a,x)\sim x^{a-1}e^{-x}\sum^{\infty}_{n=0}\frac{\Gamma (a)}{\Gamma (a-n)}\cdot\frac{1}{x^n}
 \end{array}
 \]
 Cuando a=0
@@ -635,10 +635,10 @@ Cuando a=0
 	& 0\leq x\leq 1,p>0,q>0
 \end{array}
 \]
-\[Si\ \ x=0\Rightarrow B(p,q) \textit{funci'on Beta}\]
-\textcolor{blue}{Aparece en:\\
+\[Si\ \ x=0\Rightarrow B(p,q) \textit{función Beta}\]
+\textcolor{blue}{Aparece en:
 \begin{itemize}
-	\item Funciones hipergeom'etricas
+	\item Funciones hipergeométricas
 	\item Probabilidades
 \end{itemize}}
 \end{document}

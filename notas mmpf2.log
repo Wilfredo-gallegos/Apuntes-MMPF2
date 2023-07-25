@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.15)  24 JUL 2023 21:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.15)  24 JUL 2023 21:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -661,6 +661,17 @@ File: ../grafico 1.png Graphic file (type png)
 <use ../grafico 1.png>
 Package pdftex.def Info: ../grafico 1.png  used on input line 154.
 (pdftex.def)             Requested size: 228.85094pt x 93.94933pt.
+
+LaTeX Warning: Command \' invalid in math mode on input line 167.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.167 ...equiv \underbrace{\varphi (z+1)}_{Funció
+                                                  n\ digamma}=& \lim\limits_...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
 [3 <../grafico 1.png>] [4] [5] [6] [7] [8]
 
 LaTeX Font Warning: Command \tiny invalid in math mode on input line 437.
@@ -670,12 +681,7 @@ Overfull \hbox (5.08228pt too wide) in paragraph at lines 573--573
 []\OT1/cmr/m/n/8 primos
  []
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 638--643
-
- []
-
-[13] (notas mmpf2.aux
+[12] [13] (notas mmpf2.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
 )
@@ -683,10 +689,10 @@ Package rerunfilecheck Info: File `"notas mmpf2".out' has not changed.
 (rerunfilecheck)             Checksum: FD79209F008DF144E3D7616D876C5E59;253.
  ) 
 Here is how much of TeX's memory you used:
- 12715 strings out of 476331
- 201418 string characters out of 5783953
+ 12717 strings out of 476331
+ 201435 string characters out of 5783953
  1876660 words of memory out of 5000000
- 32948 multiletter control sequences out of 15000+600000
+ 32950 multiletter control sequences out of 15000+600000
  523204 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,21n,76p,321b,535s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -717,7 +723,7 @@ b><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
 onts/latxfont/line10.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/
 fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/ThinkPad T470/AppData/
 Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "notas mmpf2.pdf" (13 pages, 518879 bytes).
+Output written on "notas mmpf2.pdf" (13 pages, 519011 bytes).
 PDF statistics:
  192 PDF objects out of 1000 (max. 8388607)
  20 named destinations out of 1000 (max. 500000)
