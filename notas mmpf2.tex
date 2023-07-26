@@ -8,7 +8,7 @@
 \usepackage[letterpaper,top=2cm,bottom=2cm,left=1cm,right=1cm,marginparwidth=1.75cm]{geometry}
 
 % Useful packages
-
+\usepackage{bigints}
 \usepackage{blindtext}
 \usepackage{verbatim}
 \usepackage{amsmath}
@@ -163,20 +163,23 @@ Esta integral es útil cuando V no es entero.\\
 \begin{array}{rl}
 	\ln(\Gamma (z+1))=& z\cdot\Gamma (z)\\
 	=& \lim\limits_{n\to \infty}\frac{z}{z} \ln\left[\frac{n!\cdot n^z}{(z+1)(z_2)\cdot\cdot\cdot (z+n)}\right]\\
+	\\
 	\frac{d}{dz} \ln(\Gamma (z+1))=& \frac{d}{dz}\lim\limits_{n\to \infty}\left[\ln(n!)+z\cdot \ln(n)-\ln(z+1)-\ln(z+2)-...\ln(z+n)\right]\\
-	\frac{d}{dz}\ln (\Gamma (z+1))\equiv \underbrace{\varphi (z+1)}_{Función\ digamma}=& \lim\limits_{n\to \infty}\left( \ln (n)-\frac{1}{z+1}-\frac{1}{z+2}\cdot\cdot\cdot -\frac{1}{z+n}\right)\\
-	&\\
+	\\
+	\frac{d}{dz}\ln (\Gamma (z+1))\equiv \underbrace{\varphi (z+1)}_{\parbox{3.5em}{\footnotesize Función digamma}}=& \lim\limits_{n\to \infty}\left( \ln (n)-\frac{1}{z+1}-\frac{1}{z+2}\cdot\cdot\cdot -\frac{1}{z+n}\right)\\
+	\\
 	\varphi (z+1)=& \frac{[\Gamma (z+1)]'}{\Gamma (z+1)}
 \end{array}
 \]
 Si sumamos y restamos un número armónico
 \[H_n=\sum^n_{m=1}\frac{1}{m}\]
-\[\varphi (z+1) =\lim\limits_{n\to \infty} \left[\underbrace{(\ln (n)-H_n)}_{=-\delta\textit{ cuando } n\to\infty}-\sum\left(\frac{1}{z+m}-\frac{1}{m}\right)\right]\]
+\[\varphi (z+1) =\lim\limits_{n\to \infty} \left[\underbrace{(\ln (n)-H_n)}_{\parbox{4.5em}{\footnotesize $-\delta$\textit{ cuando } $n\to\infty$}}-\sum\left(\frac{1}{z+m}-\frac{1}{m}\right)\right]\]
 \[\Rightarrow \varphi (z+1) = -\delta +\sum^{\infty}_{m=1}\frac{z}{m(m+z)},\ \ \ \textit{si z=0}\Rightarrow\varphi (1)=-\delta\]
 para $n>0$, n entero.
 \[
 \begin{array}{rl}
-	\varphi (n+1) =& -\delta +\sum^n_{m=1}\frac{1}{m}\\
+	\varphi (n+1) =& -\delta +\sum\limits^{n}_{m=1}\frac{1}{m}\\
+	\\
 	=& -\delta+H_n
 \end{array}
 \]
@@ -186,7 +189,8 @@ Cuando se deriva muchas veces la función digamma
 \[
 \begin{array}{rl}
 	\varphi^{(m)} (z+1) \equiv& \frac{d^{m+1}}{dz^{m+1}}\ln\Gamma (z+1)\\
-	\varphi^{(m)} (z+1)=& (-1)^{m+1}m!\sum^{\infty}_{n=1}\frac{1}{(z+n)^{m+1}},\ \ \ m=1,2,3...
+	\\
+	\varphi^{(m)} (z+1)=& (-1)^{m+1}m!\cdot \sum\limits^{\infty}_{n=1}\frac{1}{(z+n)^{m+1}},\ \ \ m=1,2,3...
 \end{array}
 \]
 Si z=0 la función se conoce como zeta de Riemann
@@ -196,6 +200,7 @@ Si z=0 la función se conoce como zeta de Riemann
 \[
 \begin{array}{rl}
 	\ln\Gamma (z+1) =& \sum^{\infty}_{n=1}\frac{z^n}{n!}\varphi^{(n-1)}_{(1)}\\
+	\\
 	=& -\delta\cdot z +\sum^{\infty}_{n=2}(-1)^n\frac{z^n}{n}\zeta (n)
 \end{array}
 \]
@@ -217,7 +222,7 @@ Transformar la serie por medio de fracciones parciales y expresar la serie infin
 \end{array}
 \]
 \[\frac{d^m}{dz^m}\left[\varphi (z+2)-\varphi (z+1)\right] = \frac{d^m}{dz^m}\left[\frac{1}{z+1}\right]=\frac{(-1)^mm!}{(z+1)^{m+1}}\]
-Demuestre  que:
+Demuestre que:
 \[\frac{1}{2}\ln \left[\frac{\pi\cdot z}{sen(\pi\cdot z)}\right]=\sum^{\infty}_{n=1}\frac{\zeta (2n)}{2n}z^{2n},\ \ \ |z|<1\]
 \textcolor{red}{
 \begin{itemize}
@@ -226,12 +231,16 @@ Demuestre  que:
 \end{itemize}
 }
 \[\Gamma (z)\Gamma (1-z)\rightsquigarrow\Gamma (1+z)\Gamma (1-z)\]
+
 \[
 \begin{array}{rl}
-	\ln\left[\Gamma (1+z)\Gamma (1-z)\right]=& -\delta\cdot z +\sum^{\infty}_{n=2}(-1)^n\frac{z^n}{n}\zeta (n)\\
-	&+(-\delta(-z))+\sum^{\infty}_{n=2}(-1)^n\frac{(-z)^n}{n}\zeta (n)\\
-	=&\sum^{\infty}_{n=2}\zeta (n)\underbrace{\left[\frac{z^n}{n}+\frac{(-z)^n}{n}\right]}_{\textcolor{red}{z^{2n}}}\\
-	=& 2\sum^{\infty}_{n=1}\cancelto{1}{(-1)^{2n}}\zeta (2n)\frac{z^{2n}}{2n}
+	\ln\left[\Gamma (1+z)\Gamma (1-z)\right]=& -\delta\cdot z +\sum\limits^{\infty}_{n=2}(-1)^n\frac{z^n}{n}\zeta (n)\\
+	\\
+	&+(-\delta(-z))+\sum\limits^{\infty}_{n=2}(-1)^n\frac{(-z)^n}{n}\zeta (n)\\
+	\\
+	=&\sum\limits^{\infty}_{n=2}\zeta (n)\underbrace{\left[\frac{z^n}{n}+\frac{(-z)^n}{n}\right]}_{\textcolor{red}{z^{2n}}}\\
+	\\
+	=& 2\sum\limits^{\infty}_{n=1}\cancelto{1}{(-1)^{2n}}\zeta (2n)\frac{z^{2n}}{2n}
 \end{array}
 \]
 \newpage
@@ -241,8 +250,9 @@ Demuestre  que:
 
 \[\Gamma (p+q)\propto \Gamma (p)\Gamma (q)\]
 \[
-\begin{array}{rl}
-	n!= \Gamma (n+1)\& \int^{\infty}_0 e^{-t}t^2 dt,\ \ \textit{Variante de gamma para definir la funión beta}\\
+\begin{array}{rlr}
+	n!=& \Gamma (n+1)\& \int^{\infty}_0 e^{-t}t^2 dt,&\parbox{10em}{\footnotesize Variante de gamma para definir la funión beta} \\
+	\\
 	\Gamma (m)\Gamma (n)=& \int^{\infty}_0 e^{-u}u^m fu\int^{\infty}_0 e^{-v}v^n dv
 \end{array}
 \]
@@ -255,6 +265,7 @@ Demuestre  que:
 \[
 \begin{array}{rl}
 	\Gamma (m)\Gamma (n) =& \int^{\infty}_0 \int^{\infty}_0e^{-x^{2}}e^{-y^{2}}x^{2m}(2x)y^{2m}(2y)dxdy\\
+	\\
 	=& 4\int^{\infty}_0 e^{-x^{2}} e^{-x^{2}}e^{-y^{2}}x^{2m+1}y^{2m+1}dxdy
 \end{array}
 \]
@@ -277,12 +288,14 @@ Usando el jacobiano
 \[
 \begin{array}{rl}
 	=& \int^{\infty}_0\int^{\pi/2}_0 \cancelto{e^{-r^2cos^2\theta}}{e^{-r^2}} r^{2m+2n+3} cos^{2m+1}\theta sen ^{2n+1}drd\theta\\
+	\\
 	\Gamma (m)\Gamma (n) =& 2 \Gamma (m+n+1)\int^{\pi/2}_0 cos^{2m+1}\theta sen^{2n+1}\theta d\theta
 \end{array}
 \]
 \[
 \begin{array}{rl}
 	\Gamma (z)=& 2 \int^{\infty}_0 e^{-t^2}t^{2z-1}dt;\ Re(z>0)\\
+	\\
 	\Gamma (q)\Gamma (p) =& 4\int^{\infty}_0 e^{-s^2} s^{2q-1}ds\int^{\infty}_0 e^{-t^2}t^{2p-1}dt
 \end{array}
 \]
@@ -295,7 +308,9 @@ Usando el jacobiano
 \[
 \begin{array}{rl}
 	\Gamma (q)\Gamma (p)=& 4\int\int e^{-r^2cos^2\theta}e^{-r^2sen^2\theta}r^{2q-1}cos^{2q-1}r^{2p-1}sen^{2p-1}rdrd\theta\\
+	\\
 	=& 2\cdot 2 \int^{\infty}_0 e^{-r^2}r^{2q+2p-1}cos^{2q-1}sen^{2p-1}drd\theta\\
+	\\
 	\textcolor{blue}{\Gamma (p)\Gamma (q)=}&\textcolor{blue}{2\int cos^{2q-1}sen^{2p-1} d\theta}
 \end{array}
 \]
@@ -304,7 +319,7 @@ Usando el jacobiano
 \begin{center}
 \fbox{\begin{minipage}{15em}
   \[b(p,q)=\frac{\Gamma (q)\Gamma (p)}{\Gamma (q+p)}\]
-\end{minipage}} definición de función beta
+\end{minipage}} $\Bigg\}$ definición de función beta
 \end{center}
 \[b(p,q)=b(q,p)\]
 Si se sustituye $t=cos^2\theta$ y $dt=-2cos\theta sen\theta d\theta$
@@ -314,14 +329,16 @@ Si se sustituye $t=cos^2\theta$ y $dt=-2cos\theta sen\theta d\theta$
 		\cancelto{t}{cos^2\theta}+sen^2\theta=&1\\
 		sen^2\theta =&1-t
 	\end{array} \textcolor{red}{\star}= & 2\int^{1}_0 cos^{2m}\theta\cancel{cos\theta} (1-t)^n\cancel{sen\theta}dt\\
-	\begin{array}{rr}
+	\\
+	\begin{array}{rl}
 		sen^{2n+1}\theta=&sen^{2n}\theta sen\theta\\
 		=&(1-t)^n sen\theta
-	\end{array} = & \int^{1}_0 t^m (1-t)^n dt\Rightarrow \textit{ otra forma de escribir} B(m+1,n+1)
+	\end{array} = & \int^{1}_0 t^m (1-t)^n dt\Rightarrow \textit{ otra forma de escribir } B(m+1,n+1)
 \end{array}
 \]
 \newpage
 \textbf{lunes 17 de julio}
+
 \textbf{\textcolor{red}{Ej.}}
 
 Una particula de masa m se mueve en un potencial simétrico esta descrito por $v(x)=A|x|^n$ y energía total como $\frac{1}{2}m\left(\frac{dx}{dt}\right)^2 +v(x)=E$
@@ -348,8 +365,8 @@ Muestre que:
 \begin{array}{rl}
 	\uptau =& 2\frac{\sqrt{2m}}{\sqrt{E}\int^1_0\frac{\frac{x}{nt}dt}{(1-t)^{1/2}}}\\
 	=&\textcolor{red}{\left(\frac{E}{A}\right)^{1/n}\frac{2}{n}}\sqrt{\frac{2m}{E}}\int^1_0\frac{\frac{\frac{(Et)^{1/n}}{A^{1/n}}}{nt}dt}{(1-t)^{1/2}}\\
-	=&\frac{2}{n}\sqrt{\frac{2m}{E}}\left(\frac{E}{A}\right)^{1/n}\underbrace{\int^1_0t^{\frac{1}{n}-1}(1-t)^{-1/2}dt}_{\textcolor{red}{\frac{\Gamma (\frac{1}{n})\Gamma \cancelto{\sqrt{\pi}}{\Gamma (1/2)}}{\Gamma (\frac{1}{n}+\frac{1}{2})}}}\\
-	\uptau =& \frac{2}{n}\sqrt{\frac{2\pi m}{E}}\left(\frac{E}{A}\right)^{1/n}\frac{\Gamma} (\frac{1}{n}){\Gamma (\frac{1}{n}+\frac{1}{2})}
+	=&\frac{2}{n}\sqrt{\frac{2m}{E}}\left(\frac{E}{A}\right)^{1/n}\underbrace{\int^1_0t^{\frac{1}{n}-1}(1-t)^{-1/2}dt}_{\textcolor{red}{\frac{\Gamma (\frac{1}{n}) \cancelto{\sqrt{\pi}}{\Gamma (\frac{1}{2})}}{\Gamma (\frac{1}{n}+\frac{1}{2})}}}\\
+	\uptau =& \frac{2}{n}\sqrt{\frac{2\pi m}{E}}\left(\frac{E}{A}\right)^{1/n}\frac{\Gamma (\frac{1}{n})}{\Gamma (\frac{1}{n}+\frac{1}{2})}
 \end{array}
 \]
 \section{SERIES DE STIRLING}
@@ -409,6 +426,7 @@ Como $\frac{t}{e^t-1}=\sum^{\infty}_{n=0}\frac{B_nt^n}{n!}$ es una serie de Tayl
 \[
 \begin{array}{rl}
 	\int^{\infty}_0=&\frac{1}{2}f(0)+f(1)+f(2)+f(3...)\\
+	\\
 	&+\frac{B_2}{2!}f'(0)+\frac{B_4}{4!}f^{(3)}(0)+\frac{B_6}{6!}f^{(5)}(0)
 \end{array}\]
 Donde $B_n$ son los números de Bernoulli
@@ -433,21 +451,14 @@ Donde $B_n$ son los números de Bernoulli
 	\int^{\infty}_0f(x)dx=\int^{\infty}_0\frac{dx}{(z+x)^2}=&\frac{1}{z}=\frac{1}{2}\frac{1}{z^2}+\underbrace{\varphi ^{(1)}_{(z+1)}}_{\textcolor{red}{\textit{poligamma con m=1}}}-\frac{B_2}{z^3}-\frac{B_4}{z^5}-...\\
 	\varphi ^{(1)}_{(z+1)}=& \frac{d}{dz}\underbrace{\varphi (z+1)}_{digamma}\\
 	\varphi ^{(1)}_{(z+1)}=&\frac{1}{z}-\frac{1}{2z^2}+\frac{B_2}{z^3}+\frac{B_4}{z^5}+...\\
-	=& \frac{1}{z}-\frac{1}{2z^2}+\underbrace{\sum^{\infty}_{n=1}\frac{B_{2n}}{z^{2n+1}}}_{
-	\begin{tiny}
-	\begin{array}{c}
-		\textit{Es una serie asintotica}\\
-		\textit{que es util si se}\\
-		\textit{utilizan pocos términos}
-	\end{array}		
-	\end{tiny}			
-	}
+	=& \frac{1}{z}-\frac{1}{2z^2}+\underbrace{\sum^{\infty}_{n=1}\frac{B_{2n}}{z^{2n+1}}}_{\parbox{5.5em}{\tiny Es una serie asintótica que es util si se utilizan pocos términos}}
 \end{array}\]
-A; integrar $\varphi ^{(1)}_{(z+1)}$ obtenemos $\varphi _{(z+1)}$ [Digamma]
+Al integrar $\varphi ^{(1)}_{(z+1)}$ obtenemos $\varphi _{(z+1)}$ [Digamma]
 \[
 \begin{array}{rl}
 	\varphi_{(z+1)}=& C_1+\ln z+\frac{1}{2z}-\frac{B_2}{2z^2}-\frac{B_4}{4z^4}-...\\
-	=& C_1
+	\\
+	=& C_1+\ln z+\frac{1}{2z}-\sum\limits^{\infty}_{n=1}\frac{B_{2n}}{\cdot z^{2n}}
 \end{array}
 \]
 \newpage
@@ -455,8 +466,9 @@ A; integrar $\varphi ^{(1)}_{(z+1)}$ obtenemos $\varphi _{(z+1)}$ [Digamma]
 \textbf{Fórmula de stirling}
 \[
 \begin{array}{rl}
-	\varphi_{(z+1)}=& C_1 +\ln z+ \frac{1}{2z}-\frac{B_2}{2z^2}-\frac{B_4}{4z^4}-...\ \ \ B_{2n} \textit{ Números de Bernoulli}\\
-	=& C_1 +\ln z+ \frac{1}{2z}-\sum^{\infty}_{n=1}\frac{B_{2n}}{2nz^{2n}}
+	\varphi_{(z+1)}=& C_1 +\ln z+ \frac{1}{2z}-\frac{B_2}{2z^2}-\frac{B_4}{4z^4}-...,\ \ \ B_{2n} \textit{ Números de Bernoulli}\\
+	\\
+	=& C_1 +\ln z+ \frac{1}{2z}-\sum\limits^{\infty}_{n=1}\frac{B_{2n}}{2nz^{2n}}
 \end{array}
 \]
 \[\textcolor{red}{\varphi_(z+1)\equiv \frac{d}{dz} \ln \Gamma (z+1)}\]
@@ -472,9 +484,13 @@ A; integrar $\varphi ^{(1)}_{(z+1)}$ obtenemos $\varphi _{(z+1)}$ [Digamma]
 \[
 \begin{array}{rl}
 	\lim\limits_{n\to \infty}\frac{z!}{\sqrt{z}z^ze^{-z}}=& \sqrt{2\pi}\\
+	\\
 	z!\approx &\sqrt{2\pi}\sqrt{z}z^ze^{-z}\\
+	\\
 	\textcolor{blue}{\Gamma (z+1)\approx} & \textcolor{blue}{\sqrt{2\pi} z^{z+\frac{1}{2}}e^{-z}}\\
+	\\
 	\ln \Gamma (z+1) \approx & \frac{1}{2} \ln 2\pi +\left( z+\frac{1}{2}\right)(\ln z)-z\\
+	\\
 	\ln n! \approx & n\ln n - n 
 \end{array}
 \]
