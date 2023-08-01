@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.15)  24 JUL 2023 23:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.15)  31 JUL 2023 18:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -691,7 +691,7 @@ Overfull \hbox (5.08228pt too wide) in paragraph at lines 589--589
 []\OT1/cmr/m/n/8 primos
  []
 
-[12] [13] (notas mmpf2.aux
+[12] [13] [14] [15] [16] (notas mmpf2.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
 )
@@ -699,8 +699,8 @@ Package rerunfilecheck Info: File `"notas mmpf2".out' has not changed.
 (rerunfilecheck)             Checksum: FD79209F008DF144E3D7616D876C5E59;253.
  ) 
 Here is how much of TeX's memory you used:
- 12811 strings out of 476331
- 203264 string characters out of 5783953
+ 12815 strings out of 476331
+ 203295 string characters out of 5783953
  1876660 words of memory out of 5000000
  33039 multiletter control sequences out of 15000+600000
  523556 words of font info for 74 fonts, out of 8000000 for 9000
@@ -709,37 +709,39 @@ Here is how much of TeX's memory you used:
 <C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmbx10.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ThinkPad T470/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ThinkPad T470/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/U
-sers/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmmi10.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmmi5.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/ThinkPad T470/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ThinkPad 
-T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx5.pfb><C:/Users/ThinkPad T470/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/T
+hinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex1
+0.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cmextra/cmex7.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ThinkPad T470/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/ThinkPad 
+T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:
 /Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmr12.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmr17.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/ThinkPad T470/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/ThinkPad T
-470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/U
-sers/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmsy5.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/ThinkPad T470/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ThinkPad 
-T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C
-:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmti7.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmti8.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/euler/eurm10.pfb><C:/Users/ThinkPad T470/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Us
-ers/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/sym
-bols/msam10.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "notas mmpf2.pdf" (13 pages, 551113 bytes).
+cm/cmmi8.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmr10.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ThinkPad T470/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/ThinkPad
+ T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:
+/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmr7.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmr8.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ThinkPad T470/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/ThinkPad 
+T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:
+/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmsy8.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmti10.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Users/ThinkPad T470/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/ThinkPa
+d T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurm10.p
+fb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/latxfont/line10.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/ThinkPad T470/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "notas mmpf2.pdf" (16 pages, 580123 bytes).
 PDF statistics:
- 207 PDF objects out of 1000 (max. 8388607)
- 20 named destinations out of 1000 (max. 500000)
+ 230 PDF objects out of 1000 (max. 8388607)
+ 24 named destinations out of 1000 (max. 500000)
  22 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -657,6 +657,92 @@ Cuando a=0
 	\item Funciones hipergeométricas
 	\item Probabilidades
 \end{itemize}}
+
+\newpage
+\textbf{Viernes 28 de julio}
+
+\newpage
+\textbf{Lunes 31 de julio}
+\section*{Derivaci'on bajo el signo de la integral}
+\textbf{Integral de Feynmann}
+
+\[\frac{d}{dt}\int f(x,t)dx=\int\frac{\partial (x,t)}{\partial t}dx\]
+\textbf{Derivaci'on de la funci'on Gamma}
+\[F(t)=\int\limits^{\infty}_0e^{-tx}dx\]
+$F(t)=\frac{1}{t}$ para $t>0$
+\[
+\begin{array}{rl}
+	\frac{dF(t)}{dt}=F'(t)=& \int\limits^{\infty}_0\frac{d}{dt}e^{-tx}dx=\frac{d}{dt}\left[\frac{1}{t}\right]\\
+	\Rightarrow & \int\limits^{\infty}_0-xe^{-tx}dx=-\frac{1}{t^2}\\
+	\Rightarrow & \int\limits^{\infty}_0x^ne^{-tx}dx=\frac{n!}{t^{n+1}}
+\end{array}
+\]
+$\textcolor{red}{n!=\int\limits^{\infty}_0e^{-x}x^ndx}$
+\[n!=t^{n+1}\int\limits^{\infty}_0x^ne^{-tx}dx=\int\limits^{\infty}_0x^ne^{-x}dx\]
+\[\begin{array}{lr}
+	\textcolor{red}{\begin{array}{l}
+		u=tx\\
+		du=tdx
+	\end{array}} & \int\limits^{\infty}_0\cancel{t^n}\cancel{t}\frac{u^n}{\cancel{t^n}}e^{-u}\frac{du}{\cancel{t}}
+\end{array}\]
+\par\noindent\rule{\textwidth}{0.5pt}
+\[\int\limits^{1}_0\frac{x^2-1}{\ln (x)}\]
+\[
+\begin{array}{rl}
+	\textcolor{red}{\frac{d}{dt} I(t)=}&\textcolor{red}{\int\limits^{1}_0\frac{\partial}{\partial t}\frac{x^t-1}{\ln (x)}}\\
+	=&\int\limits^{1}_0\frac{1}{\ln (x)}\frac{\partial}{\partial t}[x^t-1]dx\\
+	=&\int\limits^{1}_0\frac{1}{\cancel{\ln (x)}}x^t\cancel{\ln (x)}dx\\
+	=&\int\limits^{1}_0x^tdx=\left.\frac{1}{t+1}x^{t+1}\right|^1_0\\
+	=&\frac{1}{t+1}\\
+	\int\frac{d}{\cancel{dt}}I(t)=& \int \frac{1}{t+1}dt\\
+	I(t)=& \ln |t+1|+c
+\end{array}
+\]
+si t=0
+\[\begin{array}{rl}
+	I(2)=& \ln |2+1|=\ln |3|\\
+	\textcolor{red}{I(2)=}&\textcolor{red}{\int\limits^2_0 I'(t)dt}\\
+	=& \int\limits^2_0 \frac{1}{t+1} dt=\left.\vphantom{\frac{0}{0}}\ln |t+1|\right|^2_0\\
+	= & \ln |3|
+\end{array}\]
+\par\noindent\rule{\textwidth}{0.5pt}
+\[\mathbf{\int\limits^{\infty}_0\frac{e^{-x^2}sen(x^2)}{x^2}}dx\]
+\[\textcolor{purple}{\frac{d}{dx}sen(ax^2)=x^2cos(ax^2)}\]
+\[
+\begin{array}{rl}
+	\textcolor{purple}{\frac{d}{da}}I(a)=& \cancel{\frac{d}{da}}\int\limits^{\infty}_0\textcolor{purple}{\frac{\partial}{\partial a}}\frac{e^{-x^2}sen(x^2)}{x^2}dx\\ \\
+	=& \int\limits^{\infty}_0\frac{e^{-x^2}}{\cancel{x^2}}\cancel{x^2}cos(ax^2)dx\\ \\
+	I'(a)=&\int\limits^{\infty}_0e^{-x^2}cos(ax^2)dx\\
+	=& Re\int\limits^{\infty}_0e^{-x^2}e^{iax^2}dx\\ \\
+	=& Re\int\limits^{\infty}_0e^{-x^2(1-ia)}dx\\ \\
+	\textcolor{red}{\int}I'(a)\textcolor{red}{da}=&\textcolor{red}{\int}\frac{1}{2}\sqrt{\pi} Re\left[\frac{1}{\sqrt{1-ia}}\right]\textcolor{red}{da} \\ \\
+	
+	I(a)=& \frac{\sqrt{\pi}}{\cancel{2}}Re\left[\cancel{2}i\sqrt{1-ia}\right]+c
+\end{array}
+\]
+\[a=0\Rightarrow sen(ax^2)=0\Rightarrow c=0\]
+a=1
+\[I(1)=\sqrt{\pi}Re\left[i\sqrt{1-i}\right]\]
+$1-i$ en forma polar: $re^{i\theta}$
+\[
+\begin{array}{rl}
+	r=& \sqrt{1^2+(-1)^2}=\sqrt{2}\\ \\
+	\theta=& tan^{-1}\left[\frac{-1}{1}\right]=-\frac{\pi}{4}\\ \\
+	1-i=& \sqrt{2}e^{-\frac{\pi}{4}i}\\ \\
+	\textcolor{purple}{\sqrt{1-i}=}&\textcolor{purple}{\sqrt{\sqrt{2}}e^{-\frac{\pi}{8}i}}\\ \\
+	 \textcolor{purple}{=}& \textcolor{purple}{\sqrt{\sqrt{2}}\left[cos\frac{\pi}{8}-i sen\frac{\pi}{8}\right]}\\ \\
+	 \textcolor{purple}{i\sqrt{1-i}=}&\textcolor{purple}{\sqrt{\sqrt{2}}\left[icos\frac{\pi}{8}-i^2 sen\frac{\pi}{8}\right]}\\ \\
+\end{array}
+\]
+\par\noindent\rule{\textwidth}{0.5pt}
+\[\textcolor{blue}{\mathbf{\int\limits^{\infty}_0\left[\vphantom{\frac{0}{0}}\ln (x)\right]\left[\vphantom{\frac{0}{0}}\ln (tanh(x))\right]dx}}\]
+\[I(m)=\int\limits^{\infty}_0x^m\ln(tanh(x))dx\]
+\begin{center}
+	a usar:
+\end{center}
+\[\frac{d}{dm}x^m=x^m\ln (x)\]
+\[tanh(x)=\frac{e^x-e^{-x}}{e^x+e^{-x}}=\frac{1-e^{-2x}}{1+e^{-2x}}\]
+\[\Gamma (z)=\int\limits^{\infty}_0t^{z-1}e^{-t}dt\]
 \end{document}
 
 
