@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.15)  7 AUG 2023 18:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.15)  7 AUG 2023 18:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1039,7 +1039,7 @@ Here is how much of TeX's memory you used:
  43582 multiletter control sequences out of 15000+600000
  528427 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,21n,80p,409b,689s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,21n,80p,500b,689s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmbx10.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ThinkPad T470/AppData/Local/Progr
@@ -1070,7 +1070,7 @@ public/amsfonts/euler/eurm10.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs
 /AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><
 C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
 s/symbols/msbm10.pfb>
-Output written on "notas mmpf2.pdf" (19 pages, 553758 bytes).
+Output written on "notas mmpf2.pdf" (19 pages, 557660 bytes).
 PDF statistics:
  233 PDF objects out of 1000 (max. 8388607)
  28 named destinations out of 1000 (max. 500000)
