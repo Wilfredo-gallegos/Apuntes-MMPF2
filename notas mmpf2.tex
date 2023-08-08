@@ -8,6 +8,8 @@
 \usepackage[letterpaper,top=2cm,bottom=2cm,left=1cm,right=1cm,marginparwidth=1.75cm]{geometry}
 
 % Useful packages
+\def\alignboxed#1&#2\endalignboxed{\rlap{\boxed{#1#2}}\hphantom{#1\mkern6mu}
+}
 \usepackage{bigints}
 \usepackage{blindtext}
 \usepackage{verbatim}
@@ -26,7 +28,16 @@
 \usepackage{upgreek}
 \newcommand{\bigslant}[2]{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}
 \usepackage{xcolor}
+\usepackage{mathtools, bm}
 \usepackage{multicol}
+\usepackage{tikz}
+\makeatletter
+\newcommand\mathcircled[1]{%
+  \mathpalette\@mathcircled{#1}%
+}
+\newcommand\@mathcircled[2]{%
+  \tikz[baseline=(math.base)] \node[draw,circle,inner sep=1pt] (math) {$\m@th#1#2$};%
+}
 %\setlength{\columnseprule}{1pt}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 
@@ -38,7 +49,7 @@
 
 \textbf{viernes 7 de julio}
 \section{Función Gamma}
-\textbf{Límite al infinito(Euler)}\\
+\textbf{Límite al infinito(Euler)}
 
 \[\begin{array}{rl}
 	\Gamma (z)\equiv & \lim\limits_{n\to \infty} \frac{1\cdot 2\cdot 3\cdot\cdot\cdot n}{z(z+1)(z+2)\cdot\cdot\cdot (z+n)}n^z,\ \ \ z\in\mathbb{Z}^{+}\ o\ z\in\mathbb{C}\\
@@ -67,10 +78,10 @@ Como aparecen en física
 \[\Gamma (z)= 2\int^{\infty}_0 e^{-t^2}t^{z+1}dt\ \ \ o \ \ \ \Gamma (z) = \int^1_0\left[ln(\frac{1}{t})\right]^{z-1}dt\]
 
 Si $z=\frac{1}{2}\Rightarrow \Gamma (\frac{1}{2}) = \sqrt{\pi}$ es integral error de Gauss
-\[F(z,n)=\int^n_0\left(1-\frac{t}{n}\right)^nt^{z-1}dt,\ \ \ \textit{Re(z)}>\textit{0 con n entero positivo}\ni\]
+\[F(z,n)=\int^n_0\left(1-\frac{t}{n}\right)^nt^{z-1}dt,\ \ \ \text{Re(z)}>\text{0 con n entero positivo}\ni\]
 \[e^{-t}=\lim\limits_{n\to \infty}\left(1-\frac{t}{n}\right)^n\]
 \[\Rightarrow F(z,n)=\int^n_0\left(1-\frac{t}{n}\right)^nt^{z-1}dt = \int^1_0 (1-u)^n(un)^{z-1}ndu\ni u=\frac{t}{n}\]
-\[\frac{F(z,n)}{n^z}=\int^1_0 (1-u)^n(u)^{z-1}du\]\\
+\[\frac{F(z,n)}{n^z}=\int^1_0 (1-u)^n(u)^{z-1}du\]
 
 Ahora por integración por partes usando $u=(1-u)^n$, $du=n(1-u)^{n-1}du$, $v=\frac{u^z}{z}$, $dv=u^{z-1}du$ tenemos
 \[
@@ -90,18 +101,18 @@ Ahora por integración por partes usando $u=(1-u)^n$, $du=n(1-u)^{n-1}du$, $v=\f
 
 \textbf{Ecuación estadística de Maxwell-Boltzmann}
 \[\begin{array}{lcl}
-	&& \textit{K es la constante de Boltzmann}\\
-	e^{-E/KT} && \textit{T es la temperatura absoluta}\\
-	&& \textit{E(energía): estado de energía ocupada}
+	&& \text{K es la constante de Boltzmann}\\
+	e^{-E/KT} && \text{T es la temperatura absoluta}\\
+	&& \text{E(energía): estado de energía ocupada}
 
 \end{array}\]
 
 probabilidad de estar en estado de energía es $Y_{kt}=\beta$
 
 \[\begin{array}{lcl}
-	P(E)=Ce^{-\beta E} && \textit{Para un gas idel sin estructura}\\
+	P(E)=Ce^{-\beta E} && \text{Para un gas idel sin estructura}\\
 	n(E)dE && n(E)^{1/2}\\
-	1=C\int n(E) e^{-\beta E}dE && \textit{E=energía cinética}
+	1=C\int n(E) e^{-\beta E}dE && \text{E=energía cinética}
 \end{array}\]
 \par\noindent\rule{\textwidth}{0.5pt}
 \[
@@ -136,14 +147,15 @@ probabilidad de estar en estado de energía es $Y_{kt}=\beta$
 \textbf{PROPIEDADES ANALíTICAS}
 
 $[\Gamma (z)]^{-1}$ tiene singularidades en $z=0,-1,-2...$ y no tiene cuando  $z=-1,2,3...$ y no tiene ceros en el plano complejo finito positivo.\\
-El residuo $R_n$ cuando $z=-n$ donde n es un entero mayor o igual a cero.\\
+El residuo $R_n$ cuando $z=-n$ donde n es un entero mayor o igual a cero.
+
 \[
 \begin{array}{rl}
 	R_n=&\lim\limits_{n\to 0} (\epsilon\Gamma (-n+\epsilon))\\
 	=& \lim\limits_{n\to 0} \frac{\epsilon\Gamma (-n+1+\epsilon)}{-n+\epsilon}\\
 	=& \lim\limits_{n\to 0} \frac{\epsilon\Gamma (-n+2+\epsilon)}{(-n+\epsilon)(-n+1+\epsilon)}\\
 	=&\lim\limits_{n\to 0} \frac{\epsilon\Gamma (1+\epsilon)}{(-n+\epsilon)\cdot\cdot\cdot(\epsilon))}\\
-	=& \frac{(-1)^n}{n!}, \textit{el residuo alterna signos en } z=-n
+	=& \frac{(-1)^n}{n!}, \text{el residuo alterna signos en } z=-n
 \end{array}
 \]
 
@@ -162,19 +174,15 @@ Esta integral es útil cuando V no es entero.\\
 \[
 \begin{array}{rl}
 	\ln(\Gamma (z+1))=& z\cdot\Gamma (z)\\
-	=& \lim\limits_{n\to \infty}\frac{z}{z} \ln\left[\frac{n!\cdot n^z}{(z+1)(z_2)\cdot\cdot\cdot (z+n)}\right]\\
-	\\
-	\frac{d}{dz} \ln(\Gamma (z+1))=& \frac{d}{dz}\lim\limits_{n\to \infty}\left[\ln(n!)+z\cdot \ln(n)-\ln(z+1)-\ln(z+2)-...\ln(z+n)\right]\\
-	\\
-	\frac{d}{dz}\ln (\Gamma (z+1))\equiv \underbrace{\varphi (z+1)}_{\parbox{3.5em}{\footnotesize Función digamma}}=& \lim\limits_{n\to \infty}\left( \ln (n)-\frac{1}{z+1}-\frac{1}{z+2}\cdot\cdot\cdot -\frac{1}{z+n}\right)\\
-	\\
+	=& \lim\limits_{n\to \infty}\frac{z}{z} \ln\left[\frac{n!\cdot n^z}{(z+1)(z_2)\cdot\cdot\cdot (z+n)}\right]\\ \\
+	\frac{d}{dz} \ln(\Gamma (z+1))=& \frac{d}{dz}\lim\limits_{n\to \infty}\left[\ln(n!)+z\cdot \ln(n)-\ln(z+1)-\ln(z+2)-...\ln(z+n)\right]\\ \\
+	\frac{d}{dz}\ln (\Gamma (z+1))\equiv \underbrace{\varphi (z+1)}_{\parbox{3.5em}{\footnotesize Función digamma}}=& \lim\limits_{n\to \infty}\left( \ln (n)-\frac{1}{z+1}-\frac{1}{z+2}\cdot\cdot\cdot -\frac{1}{z+n}\right)\\ \\
 	\varphi (z+1)=& \frac{[\Gamma (z+1)]'}{\Gamma (z+1)}
-\end{array}
-\]
+\end{array}\]
 Si sumamos y restamos un número armónico
 \[H_n=\sum^n_{m=1}\frac{1}{m}\]
-\[\varphi (z+1) =\lim\limits_{n\to \infty} \left[\underbrace{(\ln (n)-H_n)}_{\parbox{4.5em}{\footnotesize $-\delta$\textit{ cuando } $n\to\infty$}}-\sum\left(\frac{1}{z+m}-\frac{1}{m}\right)\right]\]
-\[\Rightarrow \varphi (z+1) = -\delta +\sum^{\infty}_{m=1}\frac{z}{m(m+z)},\ \ \ \textit{si z=0}\Rightarrow\varphi (1)=-\delta\]
+\[\varphi (z+1) =\lim\limits_{n\to \infty} \left[\underbrace{(\ln (n)-H_n)}_{\parbox{4.5em}{\footnotesize $-\delta$\text{ cuando } $n\to\infty$}}-\sum\left(\frac{1}{z+m}-\frac{1}{m}\right)\right]\]
+\[\Rightarrow \varphi (z+1) = -\delta +\sum^{\infty}_{m=1}\frac{z}{m(m+z)},\ \ \ \text{si z=0}\Rightarrow\varphi (1)=-\delta\]
 para $n>0$, n entero.
 \[
 \begin{array}{rl}
@@ -333,7 +341,7 @@ Si se sustituye $t=cos^2\theta$ y $dt=-2cos\theta sen\theta d\theta$
 	\begin{array}{rl}
 		sen^{2n+1}\theta=&sen^{2n}\theta sen\theta\\
 		=&(1-t)^n sen\theta
-	\end{array} = & \int^{1}_0 t^m (1-t)^n dt\Rightarrow \textit{ otra forma de escribir } B(m+1,n+1)
+	\end{array} = & \int^{1}_0 t^m (1-t)^n dt\Rightarrow \text{ otra forma de escribir } B(m+1,n+1)
 \end{array}
 \]
 \newpage
@@ -397,14 +405,14 @@ Método para generar una serie asintótica:
 \[\begin{array}{ll}
 	\textbf{Método de Steepest Descents}
 	&\left\}\begin{array}{ll}
-		\textit{a lo largo del camino}\\
-		\textit{máximo decrecimiento}	
+		\text{a lo largo del camino}\\
+		\text{máximo decrecimiento}	
 	\end{array}\right.\\
-	\to \textit{Saddle point}\to \textit{punto silla}\\
-	\to \textit{Método de integrandos Holomorfos}
+	\to \text{Saddle point}\to \text{punto silla}\\
+	\to \text{Método de integrandos Holomorfos}
 \end{array}\]
 \textbf{Derivación de la fórmula de integración de Euler-Maclaurin}
-\[\longrightarrow \textit{uno de los usos de los polinomios de Bernoulli}\longleftarrow\]
+\[\longrightarrow \text{uno de los usos de los polinomios de Bernoulli}\longleftarrow\]
 Números de Bernoulli $\longrightarrow$ Polinomios de Bernoulli
 \[B_n\]
 \[\frac{t}{e^t-1}=\sum^{\infty}_{n=0}\frac{B_nt^n}{n!}\]
@@ -448,7 +456,7 @@ Donde $B_n$ son los números de Bernoulli
 \[f^{(2n+1)}_{(0)}=\left.\left(\frac{d}{dx}\right)^{2n-1}\frac{1}{(z+x)^2}\right|_{x=0}=-\frac{(2n)!}{z^{2n+1}}\]
 \[
 \begin{array}{rl}
-	\int^{\infty}_0f(x)dx=\int^{\infty}_0\frac{dx}{(z+x)^2}=&\frac{1}{z}=\frac{1}{2}\frac{1}{z^2}+\underbrace{\varphi ^{(1)}_{(z+1)}}_{\textcolor{red}{\textit{poligamma con m=1}}}-\frac{B_2}{z^3}-\frac{B_4}{z^5}-...\\
+	\int^{\infty}_0f(x)dx=\int^{\infty}_0\frac{dx}{(z+x)^2}=&\frac{1}{z}=\frac{1}{2}\frac{1}{z^2}+\underbrace{\varphi ^{(1)}_{(z+1)}}_{\textcolor{red}{\text{poligamma con m=1}}}-\frac{B_2}{z^3}-\frac{B_4}{z^5}-...\\
 	\varphi ^{(1)}_{(z+1)}=& \frac{d}{dz}\underbrace{\varphi (z+1)}_{digamma}\\
 	\varphi ^{(1)}_{(z+1)}=&\frac{1}{z}-\frac{1}{2z^2}+\frac{B_2}{z^3}+\frac{B_4}{z^5}+...\\
 	=& \frac{1}{z}-\frac{1}{2z^2}+\underbrace{\sum^{\infty}_{n=1}\frac{B_{2n}}{z^{2n+1}}}_{\parbox{5.5em}{\tiny Es una serie asintótica que es util si se utilizan pocos términos}}
@@ -466,7 +474,7 @@ Al integrar $\varphi ^{(1)}_{(z+1)}$ obtenemos $\varphi _{(z+1)}$ [Digamma]
 \textbf{Fórmula de stirling}
 \[
 \begin{array}{rl}
-	\varphi_{(z+1)}=& C_1 +\ln z+ \frac{1}{2z}-\frac{B_2}{2z^2}-\frac{B_4}{4z^4}-...,\ \ \ B_{2n} \textit{ Números de Bernoulli}\\
+	\varphi_{(z+1)}=& C_1 +\ln z+ \frac{1}{2z}-\frac{B_2}{2z^2}-\frac{B_4}{4z^4}-...,\ \ \ B_{2n} \text{ Números de Bernoulli}\\
 	\\
 	=& C_1 +\ln z+ \frac{1}{2z}-\sum\limits^{\infty}_{n=1}\frac{B_{2n}}{2nz^{2n}}
 \end{array}
@@ -505,7 +513,7 @@ n es natural.
 	\\
 	\lim\limits_{n\to \infty} \sqrt[p(n)]{q(n)}=1\\
 	\\
-	\textit{pero...}\\
+	\text{pero...}\\
 	\\
 	\lim\limits_{n\to \infty} \sqrt[n]{n!}=\infty
 \end{array}
@@ -535,11 +543,11 @@ Un conjunto de N partículas distiguibles es asignado a los estados $\psi_i\ni i
 \[w=\frac{N!}{n_1!n_2!...n_M!}\]
 La entropía asociada es $S=k\ \ln w$ donde k es la constante de Boltzmann.\\
 En el límite cuando $N\to \infty$, con $n_i=P_i N$, ($P_i$ es la fracción del as partículas en le estado i). Encuentre S  en función de $N$ y $P_i$.
-\[\textcolor{red}{\textit{Pista: } \sum_iP_i=1}\] 
+\[\textcolor{red}{\text{Pista: } \sum_iP_i=1}\] 
 \textbf{Sol. }
 \[
 \begin{array}{rl}
-	\ln N!\approx & N\ln N-N\ \ \textit{usando la condición} \sum_in_i=N\\
+	\ln N!\approx & N\ln N-N\ \ \text{usando la condición} \sum_in_i=N\\
 	S=k\ln W=& l \left[\ln N!- \ln n_i!\right]\\
 	\\
 	=& k\left[ (N\ln N-N)-\left(\sum^M_{i=1}n_i+nn_i-n_i\right)\right]
@@ -552,7 +560,7 @@ En el límite cuando $N\to \infty$, con $n_i=P_i N$, ($P_i$ es la fracción del 
 
 \[
 \begin{array}{rlr}
-	\zeta (z) =& \sum^{\infty}_{n=1} n^{-z} & \textit{por definición}\\
+	\zeta (z) =& \sum^{\infty}_{n=1} n^{-z} & \text{por definición}\\
 	\zeta (z) =& \int^{\infty}_{0}\frac{u^{z-1}}{e^u-1}du
 \end{array}
 \]
@@ -638,8 +646,8 @@ Cuando a es entero:
 Cuando a no es entero:
 \[
 \begin{array}{rll}
-	\delta (a,x)\rightarrow & \textit{serie de potencias para x pequeno} &\Rightarrow \delta (a,x)=x^a\sum^{\infty}_{n=0}(-1)^n\frac{x^n}{n!(a+n)}\\
-	\Gamma (a,x)\rightarrow & \textit{serie asintótica} &\Rightarrow \Gamma (a,x)\sim x^{a-1}e^{-x}\sum^{\infty}_{n=0}\frac{\Gamma (a)}{\Gamma (a-n)}\cdot\frac{1}{x^n}
+	\delta (a,x)\rightarrow & \text{serie de potencias para x pequeno} &\Rightarrow \delta (a,x)=x^a\sum^{\infty}_{n=0}(-1)^n\frac{x^n}{n!(a+n)}\\
+	\Gamma (a,x)\rightarrow & \text{serie asintótica} &\Rightarrow \Gamma (a,x)\sim x^{a-1}e^{-x}\sum^{\infty}_{n=0}\frac{\Gamma (a)}{\Gamma (a-n)}\cdot\frac{1}{x^n}
 \end{array}
 \]
 Cuando a=0
@@ -651,7 +659,7 @@ Cuando a=0
 	& 0\leq x\leq 1,p>0,q>0
 \end{array}
 \]
-\[Si\ \ x=0\Rightarrow B(p,q) \textit{  función Beta}\]
+\[Si\ \ x=0\Rightarrow B(p,q) \text{  función Beta}\]
 \textcolor{blue}{Aparece en:
 \begin{itemize}
 	\item Funciones hipergeométricas
@@ -743,6 +751,91 @@ $1-i$ en forma polar: $re^{i\theta}$
 \[\frac{d}{dm}x^m=x^m\ln (x)\]
 \[tanh(x)=\frac{e^x-e^{-x}}{e^x+e^{-x}}=\frac{1-e^{-2x}}{1+e^{-2x}}\]
 \[\Gamma (z)=\int\limits^{\infty}_0t^{z-1}e^{-t}dt\]
-\end{document}
+\newpage
+\textbf{Viernes 04 de agosto}
+\textbf{\textcolor{red}{Ej.}}
+\[	\int\limits^{\infty}_0\left[\ln (x)\right]\left[\ln (tanh(x))\right]\]
+\[
+\begin{array}{rl}
+	I(m)=& \int\limits^{\infty}_0 x^m\left[ \ln (1-e^{-2x}-\ln (1+e^{-2x})\right]dx\\ \\
+	=& \int\limits^{\infty}_0 x^m\left[ \sum\limits^{\infty}_{n=1}\frac{(-1)^{n+1}(-e)^{-2nx}}{n} \right]dx -\int\limits^{\infty}_0 x^m \sum\limits^{\infty}_{n=1} \frac{(-1)^{n+1}(e)^{-2nx}}{n}dx\\ \\
+	\\
+  
 
+
+\end{array}
+\]
+\begin{center}
+\fbox{\begin{minipage}{12cm}
+\begin{align*}
+	tanh(x)=&\frac{e^x-e^x}{e^x+e^{-x}}\\
+	\frac{d}{dm}x^m =& x^m log(x)\\
+	tanh(x)=& \frac{1-e^{-2x}}{1+e^{-2x}}\\
+	\text{Serie de MacLaurin}\\
+	\ln (1+x)=& \sum\limits^{\infty}_{n=1}(-1)^{n-1} \frac{x^n}{n}
+\end{align*}
+\end{minipage}}
+PEDIR COPIA
+\section*{Funciones Bessel}
+\begin{align*}
+	x^2y''+xy'+(x^2-p^2)y=0 && \text{EC. Bessel de orden P.}\\
+	x^2y''+xy'+(x^2-\frac{1}{4})y=0 && \text{EC. Bessel de orden } \frac{1}{2}\\
+\end{align*}
+\end{center}
+
+\textbf{M'etodo por series de Frobenius}
+\[y=\sum\limits^{\infty}_{n=0}c_nx^{n+r}\]
+\begin{align*}
+	xy''+y'+xy=0 && \text{Ec. Bessel de orden 0}
+\end{align*}
+\[y_2=y_1\ln (x) +x^{r_1+1}\sum\limits^{\infty}_{n=0} b_nx^n\]
+\par\noindent\rule{\textwidth}{0.5pt}
+\[x\sum\limits^{\infty}_{n=0} (n+r)(n+r-1)C_nx^{\overset{\textcolor{red}{n+r-1}}{n+r-2}}+\sum\limits^{\infty}_{n=0}(n+r)C_nx^{n+r-1}+\sum\limits^{\infty}_{n=0}C_nx^{\overset{\textcolor{red}{n+r-1}}{n+r}}=0\]
+\begin{align*}
+	\textcolor{blue}{n=0} && \textcolor{blue}{(r)(r-1)C_0x^{r-1}} && \textcolor{blue}{rC_0x^{r-1}}&&\\
+	n=1 && (1+r)(r)C_1x^r && (1+r)C_1x^r\\
+	&& \sum\limits^{\infty}_{n=0} (n+r)(n+r-1)C_nx^{n+r-1} && \textcolor{blue}{\sum\limits^{\infty}_{n=0} (n+r) C_nx^{n+r-1}}
+\end{align*}
+
+\newpage
+\textbf{lunes 07 d e agosto}
+
+\[\boxed{xy''+y'+xy=0}\]
+\[
+\begin{array}{rl}
+	y_1=& C_0\sum\limits^{\infty}_{n=0} \frac{(-1)^nx^{2n}}{2^{2n}(n!)^2}\\\\
+	J_0(x)=&\sum\limits^{\infty}_{n=0}\frac{(-1)^nx^{2n}}{2^{2n}(n!)^2}\\ \\
+	y_2=& y_1\ln (x)+x^{r_2+1}\sum\limits^{\infty}_{n=1}b_nx^n\\
+	&\boxed{xy''\ln (x)} +2y_1'-\cancel{\frac{1}{x}y_1}+\sum\limits^{\infty}_{n=1}n(n-1)b_nx^{n-1}+\\
+	&+\boxed{y_1'\ln (x)} +\cancel{\frac{1}{x}y_1}+\sum\limits^{\infty}_{n=1}nb_nx^{n-1}+\\
+	&+\boxed{xy_1\ln (x)} +\sum\limits^{\infty}_{n=1}b_nx^{n+1}=0 \\\\
+	=&2\sum\limits^{\infty}_{n=1}\frac{(-1)^n(2n)x^{2n-1}}{2^{2n}(n!)^2}+\sum\limits^{\infty}_{n=1}n(n-1)b_nx^{\mathcircled{n-1}}+\sum\limits^{\infty}_{n=1}nb_nx^{\mathcircled{n-1}}+\sum\limits^{\infty}_{n=1}b_nx^{\mathcircled{n-1}}=0
+\end{array}\]
+\begin{align*}
+	\underline{x^0}:&& n=1 && 1(0)b_1+1b_1=0&&\Rightarrow b_1=0\\
+	\underline{x^1}:&& &&\frac{2(-1)(2)}{2^2(1!)^2}+2(2-1)b_2+2b_2=0&&\Rightarrow -1+2b_2+2b_2=0\\
+	&& && && \Rightarrow b_2=\frac{1}{4}\\
+	\underline{x^2}:&& && \text{Ya funciona para todas las series}
+\end{align*}
+\par\noindent\rule{\textwidth}{0.5pt}
+\[2\sum\limits^{\infty}_{n=2}\frac{(-1)^n(2n)x^{2n-1}}{2^{2n}(n!)^2}+\sum\limits^{\infty}_{n=3}n(n-1)b_nx^{n-1}+\sum\limits^{\infty}_{n=3}nb_jx^{n-1}+\sum\limits^{\infty}_{n=1}b_nx^{n+1}=0\]
+\[2\sum\limits^{\infty}_{n=2}\frac{(-1)^n(2n)x^{2n-1}}{2^{2n}(n!)^2}+\sum\limits^{\infty}_{n=2}(n+1)(n)b_{n+1}x^n+\sum\limits^{\infty}_{n=2}(n+1)b_{n+1}x^n+\sum\limits^{\infty}_{n=2}b_{n-1}x^n=0\]
+\[2\sum\limits^{\infty}_{n=2}\frac{(-1)^n(2n)x^{2n-1}}{2^{2n}(n!)^2}+\sum\limits^{\infty}_{n=2}\underset{\textcolor{red}{(n+1)^2b_{n+1}\cancel{(n+1)}+b_{n-1}}}{\left[n(n+1)b_{n+1}+(n+1)b_{n+1}+b_{n-1}\right]}x^n=0\]
+\[2\sum\limits^{\infty}_{n=2}\frac{(-1)^n(2n)x^{2n-1}}{2^{2n}(n!)^2}+\sum\limits^{\infty}_{n=2}\left[(n+1)^2b_{n+1}+b_{n-1}\right]x^n=0\]
+\[\boxed{\text{n par}\rightarrow \text{n=2k}}\]
+\begin{align*}
+	(2k+1)^2b_{2k+1}+b_{2k-1}&& \text{para }k\geq 1
+\end{align*}
+\[b_{2k+1}=\frac{-b_{2k-1}}{(2k+1)^2}\]
+\textbf{\underline{k=1}:}
+\[b_3=\frac{-b_1}{3^2}=0\]
+\textbf{\underline{k=2}:}
+\[b_5=\frac{-b_3}{5^2}=0\]
+\[\boxed{\text{n impar}\rightarrow \text{n=2k-1}}, k\geq 2\]
+\[\frac{2(-1)^{k}2k}{2^{2k}((k)!)^2}+(2k)^2b_{2k}+b_{2k-2}=0\]
+\[(2k)^2b_{2k}+b_{2k-2}=\frac{-(-1)^k4k}{2^{2k}(k!)^2}\]
+suponemos:
+\[b_{2k}=\frac{(-1)^{k+1}c_{2k}}{2^{2k}(k!)^2}\]
+\[\]
+\end{document}
 
