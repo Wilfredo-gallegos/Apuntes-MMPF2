@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.15)  7 AUG 2023 18:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.15)  7 AUG 2023 18:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1025,54 +1025,121 @@ Overfull \hbox (5.08228pt too wide) in paragraph at lines 597--597
 []\OT1/cmr/m/n/8 primos
  []
 
-[12] [13] [14] [15] [16] [17] [18] [19] (notas mmpf2.aux
+[12] [13] [14] [15] [16] [17] [18] [19]
+! Missing delimiter (. inserted).
+<to be read again> 
+                   }
+l.877 ...1)}\left(\frac{x}{2}\right)^{2k+p}\right}
+                                                  \]
+I was expecting to see something like `(' or `\{' or
+`\}' here. If you typed, e.g., `{' instead of `\{', you
+should probably delete the `{' by typing `1' now, so that
+braces don't get unbalanced. Otherwise just proceed.
+Acceptable delimiters are characters whose \delcode is
+nonnegative, or you can use `\delimiter <delimiter code>'.
+
+! Extra }, or forgotten $.
+<recently read> }
+                 
+l.877 ...1)}\left(\frac{x}{2}\right)^{2k+p}\right}
+                                                  \]
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+l.878 \[\y
+          =C_1J_p(x+C_2J_{-p}(x))]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.879 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.879 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+[20]
+
+! LaTeX Error: \begin{equation*} on input line 878 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.883 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(notas mmpf2.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
 )
 Package rerunfilecheck Info: File `"notas mmpf2".out' has not changed.
 (rerunfilecheck)             Checksum: FD79209F008DF144E3D7616D876C5E59;253.
- ) 
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 878 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 23590 strings out of 476331
- 440509 string characters out of 5783953
+ 23594 strings out of 476331
+ 440534 string characters out of 5783953
  1876660 words of memory out of 5000000
  43582 multiletter control sequences out of 15000+600000
  528427 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,21n,80p,500b,689s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmbx10.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ThinkPad T470/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx5.pfb><C:/Users/ThinkPad T470/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/T
-hinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex1
-0.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cmextra/cmex7.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ThinkPad T470/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/ThinkPad 
-T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:
-/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmmi8.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmr10.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ThinkPad T470/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/ThinkPad
- T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:
-/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmr7.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmr8.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ThinkPad T470/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/ThinkPad 
-T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:
-/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmsy8.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/amsfonts/euler/eurm10.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Users/ThinkPad T470
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><
-C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
-s/symbols/msbm10.pfb>
-Output written on "notas mmpf2.pdf" (19 pages, 557660 bytes).
+<C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmbx10.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ThinkPad T470/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx5.pfb><C:/Users/Thi
+nkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.p
+fb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmex10.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/ThinkPad T470/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ThinkPad T4
+70/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/U
+sers/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmmi7.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmmi8.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ThinkPad T470/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ThinkPad T
+470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/
+Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmr5.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmr7.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ThinkPad T470/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ThinkPad T4
+70/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/U
+sers/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmsy7.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmsy8.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/euler/eurm10.pfb><C:/Users/ThinkPad T470/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Users
+/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbol
+s/msam10.pfb><C:/Users/ThinkPad T470/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/symbols/msbm10.pfb>
+Output written on "notas mmpf2.pdf" (20 pages, 561525 bytes).
 PDF statistics:
- 233 PDF objects out of 1000 (max. 8388607)
- 28 named destinations out of 1000 (max. 500000)
+ 241 PDF objects out of 1000 (max. 8388607)
+ 32 named destinations out of 1000 (max. 500000)
  34 words of extra memory for PDF output out of 10000 (max. 10000000)
 
